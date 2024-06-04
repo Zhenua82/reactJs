@@ -1,0 +1,12 @@
+.date{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: blue;
+    width: 8%;
+    height: 74px;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  }

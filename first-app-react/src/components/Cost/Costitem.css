@@ -1,0 +1,27 @@
+.block1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #584503;
+    align-items: center;
+    height: 84px;
+    margin-bottom: 20px;
+  }
+  .sale{
+    color: white;
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  .cena{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: blue;
+    padding: 3px 15px;
+    height: 24px;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+  
