@@ -25,8 +25,12 @@ const CostForm = (props) => {
        setAmount('');
        setDate('');
        //Передаем полученные из формы данные наверх:
-       props.onChangeCost(costData)
+       props.onChangeCost(costData);
+       props.butt()
     };
+    function but(){
+        props.butt()
+    }
     //Вариант обработчика формы через хук useState с использованием одного состояния:
     // const [statForm, setStatForm] = useState({
     //     name: '', 
@@ -132,6 +136,7 @@ const CostForm = (props) => {
                 </div>
                 <div className='new-cost__actions'>
                     <button type="submit" onClick={addHandler}>Добавить Расход</button>
+                    <button type="submit" onClick={but}>Отмена</button>
                 </div>
             </div>
         </form>

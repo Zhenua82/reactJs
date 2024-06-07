@@ -5,6 +5,7 @@ import NewCost from './components/NewCost/newCost.js';
 import { useRef } from 'react';
 import { saveAs } from 'file-saver';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel} from 'docx';
+import Graphics from './components/Graphics/Graphics.js';
 
 const INITIALCOSTS =  [
   {
@@ -27,12 +28,50 @@ const INITIALCOSTS =  [
   }
 ];
 
+let maxValue = null;//!!!!!!!!!!!!!!!!!!!!
+let dataSets = [{ //!!!!!!!!!!!!!!!!!!!!
+        label: 'Jun',
+        value: 0
+        },
+        {
+        label: 'Feb',
+        value: 1
+        }];
+
 function App() {
+    
   const[costs, setCosts] = useState(INITIALCOSTS)
   function peredachaHandler(costData){
     setCosts(costs => ([costData, ...costs]))
     console.log(costData, '!!!!!!');
-  }
+  };
+
+  const[maxvel, setMaxvel] = useState(maxValue)//!!!!!!!!!!!!!!!!!!
+    function maxvell(maxValue){
+        // setMaxvel(maxValue)
+        setMaxvel(maxvel => (maxvel = maxValue))
+  };
+  function leng(filterCosts){
+    maxvell(filterCosts.length)
+    // Сколько покупок совершено в каждом месяце выбранного года:
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let purchasesPerMonth = filterCosts.reduce((acc, el) => {
+      let month = el.date.getMonth(); // Получить месяц из даты
+      if (!acc[month]) {
+          acc[month] = 0; // Инициализировать счетчик, если его еще нет
+      }
+      acc[month]++; // Увеличить счетчик для текущего месяца
+      return acc;
+  }, {});
+
+  dataSets = monthNames.map((name, index) => {
+      return {
+          label: name,
+          value: purchasesPerMonth[index] || 0 // Если нет покупок в этом месяце, установить значение 0
+      };
+  });
+  } //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  
   //Для сохранения в word:
   const contentRef = useRef(null);
   const generateDocument = () => {
@@ -111,7 +150,6 @@ function App() {
           });
       }
   };
-
   return (
     <> 
     <div ref={contentRef}>
@@ -121,7 +159,8 @@ function App() {
       <div>
         <NewCost onChangeCost={peredachaHandler}/>
       </div>
-      <Costs costs = {costs}/>
+      <Graphics dataSets = {dataSets} maxValue = {maxvel}/> {/* !!!!!!!!!!!!!!!!!!!!!!! */}
+      <Costs costs = {costs} onLeng = {leng} dataSetss = {dataSets}/> {/* !!!!!!!!!!!!!!!!!!!!!!! */}
     </div>
     <button onClick={generateDocument}>Сохранить все</button>
     </>

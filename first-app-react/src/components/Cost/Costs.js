@@ -1,8 +1,9 @@
-import CostItem from './Costitem';
+// import CostItem from './Costitem';
 import './Costs.css'
 import Card from '../UI/Card';
 import CostsFilter from './CostFilter';
 import React, {useState} from 'react';
+import CostsList from './CostsList';
 
 function Costs(props) {
 
@@ -14,12 +15,13 @@ function Costs(props) {
   }
   // let filterCosts = props.costs.filter(el => new Intl.DateTimeFormat('ru-RU', { year: 'numeric' }).format(el.date) === selectYear);
   let filterCosts = props.costs.filter(el => el.date.getFullYear().toString() === selectYear);
+  props.onLeng(filterCosts);//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     return (
       <> 
       <div>
         <Card className='costs'>
         <CostsFilter onChangeYear={peredachaYearHandler} year={selectYear}/>
-        {filterCosts.map((el) => (<CostItem key={el.id} date={el.date} description={el.description} amount={el.amount}/>))}
+        <CostsList filterCosts = {filterCosts}/>
         </Card>  
       </div>
       </>
