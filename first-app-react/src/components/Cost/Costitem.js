@@ -7,6 +7,7 @@ import { saveAs } from 'file-saver';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 
 function CostItem(props) {
+    //Для сохранения в word:
     const contentRef = useRef(null);
     const generateDocument = () => {
         if (contentRef.current) {
