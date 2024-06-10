@@ -1,0 +1,24 @@
+import styled from 'styled-components'
+
+
+const Button = styled.button`
+background-color: blue;
+color: white;
+border: none;
+border-radius: 5px;
+&:hover{
+background-color: purple};
+&:active{
+background-color: green};
+&:focus{
+border: 2px solid yellow;
+outline: 1px solid red;
+}
+`;
+
+// function Button(props){
+//     return (
+//         <button type={props.type} onClick={props.onClick}>{props.children}</button>
+//     )
+// }
+export default Button
