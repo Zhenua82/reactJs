@@ -17,6 +17,7 @@ function Perechen(props) {
         <div>
             {items.map((item, index) => (
                 <div key={index}>{item}</div>
+                // <div key='44444444'>{item}</div>
             ))}
         </div>
     );

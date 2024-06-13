@@ -2,6 +2,7 @@ import Button from "./components/Button";
 import Forma from "./components/Forma";
 import Perechen from "./components/Perechen";
 import React, {useState} from "react";
+import styles from'./index.module.css';
 
 function App() {
   const [zad, setZad] = useState([
@@ -25,9 +26,12 @@ function App() {
 
   return (
   <> 
-   <div className="commun">
-    <div className="obertka_form"><Forma onZadachaHandler = {ZadachaHandler}/></div>
-    <div className="perech"><Perechen addZad = {zad}/></div>
+   {/* <div className="commun">
+    <div className="obertka_form"><Forma onZadachaHandler = {ZadachaHandler}/></div> */}
+    {/* <div className="perech"><Perechen addZad = {zad}/></div> */}
+   <div className={styles.commun}>
+    <div className={styles['obertka_form']}><Forma onZadachaHandler = {ZadachaHandler}/></div>
+    <div className={styles.perech}><Perechen addZad = {zad}/></div>
    </div>
   </>)
 }

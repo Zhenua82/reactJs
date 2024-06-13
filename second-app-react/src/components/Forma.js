@@ -1,5 +1,51 @@
 import React, {useState} from "react";
 import Button from "./Button";
+// import styled from "styled-components";
+import styles from './Forma.module.css';
+
+// const FormStyle = styled.form`
+// width: 80%; 
+// & label{
+//   font-weight: 700;
+// }
+// & input{
+//   display: block;
+//   width: 100%;
+//   height: 24px;
+//   margin-top: 10px;
+// }
+// & button{
+//   margin-top: 10px;
+//   padding: 10px 20px;
+// }
+// &.empty label{
+//   color: red;
+// }
+// &.empty input{
+//   border-color: red;
+//   background-color: yellow;
+// }
+// `;
+
+// const FormStyle = styled.form`
+// width: 80%; 
+// & label{
+//   color: ${(props) => (props.emptyy ? 'red' : 'black')};
+//   font-weight: 700;
+// }
+// & input{
+//   display: block;
+//   width: 100%;
+//   height: 24px;
+//   margin-top: 10px;
+//   border-color: ${(props) => (props.emptyy ? 'red' : 'black')};
+//   background-color: ${(props) => (props.emptyy ? 'pink' : 'transparent')};
+// }
+// & button{
+//   margin-top: 10px;
+//   padding: 10px 20px;
+// }
+// `;
 
 function Forma(props){
     let[zadacha, setZadacha] = useState('');
@@ -19,12 +65,11 @@ function Forma(props){
             props.onZadachaHandler(zadacha)
         } else {
             setStateinp(false)
-            // alert('Вы не ввели данные')
         }   
     }
     
     return (
-        <form className={`${!stateinp ? 'empty' : ''}`}>
+        <form className={`${!stateinp ? styles.empty : styles.form}`}>
             <div className='new-cost__controls'>
                 <div className='new-cost__control'>
                     <label 
@@ -42,6 +87,43 @@ function Forma(props){
                 </div>
             </div>
         </form>
+
+        // <form className={`${!stateinp ? 'empty' : ''}`}>
+        //     <div className='new-cost__controls'>
+        //         <div className='new-cost__control'>
+        //             <label 
+        //             // style={{ color: stateinp ? 'black' : 'red' }}
+        //             >Задачи</label>
+        //             <input
+        //             // style={{borderColor: 'black' : 'red', 
+        //             //     'background-color': stateinp ? 'transparent' : 'yellow'}}
+        //             type="text"
+        //             onChange={zadachaHandler}
+        //             value={zadacha}/>
+        //         </div>   
+        //         <div className='new-cost__actions'>
+        //             <Button type="submit" onClick={addHandler}>Добавить задачу</Button>
+        //         </div>
+        //     </div>
+        // </form>
+
+        // // <FormStyle className={`${!stateinp ? 'empty' : ''}`}>
+        // // <FormStyle empty={`${stateinp}`}>
+        // <FormStyle emptyy={!stateinp}>
+        //     <div className='new-cost__controls'>
+        //         <div className='new-cost__control'>
+        //             <label 
+        //             >Задачи</label>
+        //             <input
+        //             type="text"
+        //             onChange={zadachaHandler}
+        //             value={zadacha}/>
+        //         </div>   
+        //         <div className='new-cost__actions'>
+        //             <Button type="submit" onClick={addHandler}>Добавить задачу</Button>
+        //         </div>
+        //     </div>
+        // </FormStyle>
     )
 }
 export default Forma
