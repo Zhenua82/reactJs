@@ -23,19 +23,3 @@ function Perechen(props) {
     );
 }
 export default Perechen;
-
-// import React from 'react';
-
-// function Perechen({ tasks, onDeleteTask }) {
-//   return (
-//     <div>
-//       {tasks.map(task => (
-//         <button key={task.id} onClick={() => onDeleteTask(task.id)}>
-//           {task.text}
-//         </button>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default Perechen;

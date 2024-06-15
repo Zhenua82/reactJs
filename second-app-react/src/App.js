@@ -1,5 +1,5 @@
 import Button from "./components/Button";
-import Forma from "./components/Forma";
+import Forma from "./components/Forma(styled-components)";
 import Perechen from "./components/Perechen";
 import React, {useState} from "react";
 import styles from'./index.module.css';
@@ -36,32 +36,3 @@ function App() {
   </>)
 }
 export default App;
-
-// import React, { useState } from "react";
-// import Forma from "./components/Forma";
-// import Perechen from "./components/Perechen";
-
-// function App() {
-//   const [tasks, setTasks] = useState([]);
-
-//   function addTask(task) {
-//     setTasks([...tasks, { id: Date.now(), text: task }]);
-//   }
-
-//   function deleteTask(taskId) {
-//     setTasks(tasks.filter(task => task.id !== taskId));
-//   }
-
-//   return (
-//     <> 
-//       <div>
-//         <Forma onAddTask={addTask} />
-//       </div>
-//       <div>
-//         <Perechen tasks={tasks} onDeleteTask={deleteTask} />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default App;

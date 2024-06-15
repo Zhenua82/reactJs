@@ -1,4 +1,4 @@
-import FormUser from "./components/FormUser(ref, let)";
+import FormUser from "./components/FormUser(ref, let-god)";
 import PerechData from "./components/PerechData(map)";
 import React, {useState} from 'react';
 // import styles from './components/PerechData.module.css';
