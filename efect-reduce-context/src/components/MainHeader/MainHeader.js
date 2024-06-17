@@ -11,7 +11,7 @@ const MainHeader = (props) => {
       <h1>React Advanced</h1>
       <Navigation
         // isLoggedIn={props.isAuthenticated} // Пропс теперь не нужен - работает context (IsLoggedInContext.Provider в App.js)
-        onLogout={props.onLogout}
+        // onLogout={props.onLogout} // Пропс теперь не нужен - работает context (IsLoggedInContext.Provider в App.js)
       />
     </header>
   );

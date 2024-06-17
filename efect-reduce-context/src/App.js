@@ -29,9 +29,10 @@ function App() {
   };
 
   return (
-      <IsLoggedInContext.Provider value={{isLoggedIn: isLoggedIn}}> 
+      <IsLoggedInContext.Provider value={{isLoggedIn: isLoggedIn, onLogout: logoutHandler}}>{/* Оборачиваем все в context - чтобы можно было обходиться без цепочки пропсов */}
       {/* <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} /> */}
-      <MainHeader onLogout={logoutHandler} />{/* Пропс isAuthenticated={isLoggedIn} теперь не нужен - работает IsLoggedInContext.Provider */}
+      {/* Пропсы isAuthenticated={isLoggedIn} и onLogout={logoutHandler} теперь не нужены - работает IsLoggedInContext.Provider */}
+      <MainHeader/>
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}

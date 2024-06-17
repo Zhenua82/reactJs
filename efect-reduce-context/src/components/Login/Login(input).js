@@ -3,6 +3,7 @@ import IsLoggedInContext from "../../context/isLoggedIn";
 import Card from "../UI/Card/Card";
 import styles from "./Login.module.css";
 import Button from "../UI/Button/Button";
+import Input from "../UI/Input/Input";
 
 function emailReducer(initState, action){
   if(action.type === 'New-email'){
@@ -87,34 +88,24 @@ const Login = (props) => {
   return (
     <Card className={styles.login}>
       <form onSubmit={submitHandler}>
-        <div
-          className={`${styles.control} ${
-            email.emailValid === false ? styles.invalid : ""
-          }`}
-        >
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email.value}
-            onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
-          />
-        </div>
-        <div
-          className={`${styles.control} ${
-            passw.passwValid === false ? styles.invalid : ""
-          }`}
-        >
-          <label htmlFor="password">Пароль</label>
-          <input
+        <Input 
+          isValid= {email.emailValid}
+          label = 'Email'
+          type="email"
+          id="email"
+          value={email.value}
+          onChange={emailChangeHandler}
+          onBlur={validateEmailHandler}
+        />
+        <Input 
+            isValid= {passw.passwValid}
+            label ='Пароль'
             type="password"
             id="password"
             value={passw.value}
             onChange={passwordChangeHandler}
             onBlur={validatePasswordHandler}
-          />
-        </div>
+        />
         <div className={styles.actions}>
           <Button type="submit" className={styles.btn} disabled={!formIsValid}>
             Вход
