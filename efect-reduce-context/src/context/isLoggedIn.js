@@ -22,9 +22,9 @@ export function IsLoggedInContextProvider(props){
   };
 
     const logoutHandler = () => {
-    localStorage.removeItem('key');
-    setIsLoggedIn(false);
-  };
+        localStorage.removeItem('key');
+        setIsLoggedIn(false);
+    };
     return <IsLoggedInContext.Provider value={{isLoggedIn: isLoggedIn, onLogout: logoutHandler, onLogin: loginHandler,}}>
         {props.children}
         </IsLoggedInContext.Provider>
