@@ -20,4 +20,11 @@ const MainHeader = (props) => {
 // export default React.memo(MainHeader);//Вариант оптимизации приложения - уменьшает ререндер по этой ветке DOM дерева
 //(если пропсы - эементарные (не ссылочные) величины и они не изменяются) - предотвращение ненужных переоценок. Если пропсы ссылочные(функции) - то нужно добавлять хук
 //useCallback(функция, [зависимости])
+//Пример useCallback для функции ZadachaHandler:
+// const ZadachaHandler = useCallback((zad) => {
+//   const but = zad.map((el, i) => (
+//     <Button type='button' key={el + i} onClick={del}>{el}</Button>
+//   ));
+//   setZad(but);
+// }, []);
 export default MainHeader;

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Forma from "./components/Forma(styled-components)";
 import Perechen from "./components/Perechen(classComponent)";
 import styles from './index.module.css';
+import ErrorBoundary from "./components/ErrorBoundary";
 
 class App extends Component {
   constructor(props) {
@@ -35,12 +36,14 @@ class App extends Component {
   render() {
     return (
       <> 
+      <ErrorBoundary> 
         <div className={styles.commun}>
           <div className={styles['obertka_form']}><Forma onZadachaHandler={this.ZadachaHandler} /></div>
           <div className={styles.perech}>
             <Perechen addZad={this.state.zad} del={this.del} />
           </div>
         </div>
+      </ErrorBoundary>
       </>
     );
   }

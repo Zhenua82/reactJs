@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.commun{
+  margin: auto;
+  width: 30%;
+}
+.obertka_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin-top: 40px;
+
+}
+.perech{
+  margin-top: 30px;
+
+}
+.perech button{
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  padding: 10px 20px;
+}
+
