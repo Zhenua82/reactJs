@@ -1,10 +1,10 @@
 import Costs from './components/Cost/Costs';
 import React, {useState} from 'react';
 import NewCost from './components/NewCost/newCost.js';
-//Для сохранения в word:
+//Для сохранения в word (npm install docx file-saver):
 import { useRef } from 'react';
-import { saveAs } from 'file-saver';
-import { Document, Packer, Paragraph, TextRun, HeadingLevel} from 'docx';
+import { saveAs } from 'file-saver';//npm install file-saver
+import { Document, Packer, Paragraph, TextRun, HeadingLevel} from 'docx';//npm install docx
 // import Graphics from './components/Graphics/Graphics.js';
 
 const INITIALCOSTS =  [
