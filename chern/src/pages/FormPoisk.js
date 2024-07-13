@@ -75,12 +75,12 @@ const FormPoisk = (props) => {
                     <label>Судебно-медицинский диагноз</label>
                     <select onChange={diagnozHandler} value={diagnoz} className={invalidFields.diagnoz ? styles.invalid : ''}>
                         <option value="">Выберите диагноз</option>
-                        <option value="отравление">Отравление</option>
                         <option value="ИБС">ИБС</option>
+                        <option value="отравление">Отравление</option> 
                     </select>
                 </div> 
                 <div className={styles.exemp}>
-                    <label>Выберите пол</label>
+                    <label>Пол</label>
                     <select onChange={sexHandler} value={sex} className={invalidFields.sex ? styles.invalid : ''}>
                         <option value="">Выберите пол</option>
                         <option value="мужской">Мужской</option>
@@ -88,7 +88,7 @@ const FormPoisk = (props) => {
                     </select>
                 </div>
                 <div className={styles.exemp}>
-                    <label>Личность трупа установлена или нет</label>
+                    <label>Личность трупа</label>
                     <select onChange={izvestenHandler} value={izvesten} className={invalidFields.izvesten ? styles.invalid : ''}>
                         <option value="">Личность трупа установлена или нет</option>
                         <option value="известен">да</option>

@@ -1,0 +1,38 @@
+.side-menu-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.01); /* Прозрачный фон */
+    pointer-events: none; /* Отключение всех кликов */
+}
+
+.side-menu {
+    height: 100%;
+    width: 20%;
+    background-color: #e0f7fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    pointer-events: auto; /* Включение кликов только для меню */
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    /* margin-top: 200px; */
+    margin-top: 150px;
+}
+
+.side-menu li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.side-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+}

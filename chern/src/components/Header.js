@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logoImg from '../assets/logo.webp';
 import styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     const [dateTime, setDateTime] = useState({
@@ -22,11 +22,12 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <Link to='/home'>  <img src={logoImg} alt="Конструктор смэ" className={styles.logo} /> </Link>
+            <NavLink to='/home'>  <img src={logoImg} alt="Конструктор смэ" className={styles.logo} /> </NavLink>
             <nav className={styles.nav}>
-                <Link className={styles.link} to='/search'>Работа</Link>
-                <Link className={styles.link} to='/otravlenieM'>Помощь</Link>
-                <Link className={styles.link} to='/home'>На главную</Link>
+                <NavLink activeClassName={styles.linkActive} className={styles.link} to='/search'>Работа</NavLink>
+                <NavLink activeClassName={styles.linkActive} className={styles.link} to='/help'>Помощь</NavLink>
+                <NavLink activeClassName={styles.linkActive} className={styles.link} to='/info'>Справка</NavLink>
+                <NavLink className={styles.link} to='/home'>На главную</NavLink>
             </nav>
             <div className={styles.dateTime}>
                 <span className={styles.date}>{dateTime.date}</span>

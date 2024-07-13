@@ -12,11 +12,12 @@ body {
 }
 
 #root {
-  width: 90%;
+  width: 100%;
   margin: auto;
-  margin-top: 200px;
+  /* margin-top: 200px; */
+  margin-top: 150px;
 }
-
+/* Стили текста, параграфов:  */
 #root p{
   display: flex;
   align-items: center;
@@ -45,3 +46,53 @@ body {
 }
 .red{color: red;}
 .blue{color: blue;}
+
+
+/* Стили некликабельности + cтили кнопки с изображением word:: */
+.content-wrapper {
+  margin-left: 20%;
+  padding: 20px;
+  position: relative;
+}
+
+.content {
+  pointer-events: none; /* Disable pointer events for content */
+}
+
+.clickable-button {
+  /* position: relative; */
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10; /* Bring the button above the overlay */
+  pointer-events: auto; /* Enable pointer events for the button */
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clickable-button:hover {
+  background-color: #0056b3;
+}
+
+.wordImg {
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Fully transparent */
+  z-index: 5; /* Below the button but above the content */
+}
