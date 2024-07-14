@@ -21,18 +21,26 @@
     list-style-type: none;
     padding: 0;
     /* margin-top: 200px; */
-    margin-top: 150px;
+    margin-top: 130px; 
+    font-size: 16px;
+    color: #1f78b3;
+    font-weight: bold;
 }
 
 .side-menu li {
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-top: 10px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    color: black;
 }
 
 .side-menu li:hover {
     background-color: rgba(0, 0, 0, 0.1);
     padding-left: 10px;
+}
+
+.side-menu .linkActive{
+    text-shadow: 0 0 10px #fa5555, 0 0 20px #fa5555, 0 0 30px #fa5555;
 }

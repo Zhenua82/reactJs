@@ -42,8 +42,7 @@ const App = () => {
         <Spravka/>
       </Route>
 
-
-      
+   
       <Route path='/otravlenieM'>
         <OtravlenieNeftM></OtravlenieNeftM>
       </Route>
@@ -54,12 +53,6 @@ const App = () => {
         <InJob></InJob>
       </Route>
     </Switch>
-      {/* <Home/>
-      <FormPoisk onChangeData={onChangeData}></FormPoisk>
-      <HeaderExp></HeaderExp>
-      <HeaderSpec></HeaderSpec>
-      <OtravlenieNeftM></OtravlenieNeftM>
-      <OtravlenieNeftF></OtravlenieNeftF>   */}
     </>)
     };
 

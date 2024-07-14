@@ -1,36 +1,35 @@
-// import React from 'react';
-// import './SideMenu.css';
-
-// function SideMenu() {
-//     return (
-//         <div className="side-menu">
-//             <ul>
-//                 <li>Главная</li>
-//                 <li>Вопросы</li>
-//                 <li>Объекты исследований</li>
-//                 <li>Обстоятельства дела</li>
-//                 <li>Приложения</li>
-//             </ul>
-//         </div>
-//     );
-// }
-
-// export default SideMenu;
-
-
 import React from 'react';
 import './SideMenu.css'; // Подключение CSS для стилей компонента
 
+import { useSelector, useDispatch } from 'react-redux';
+
 function SideMenu() {
+    const ushibRanaOgr = useSelector((state) => state.ushibRanaOgr);
+    const ushibRanaNoogr = useSelector((state) => state.ushibRanaNoogr);
+    const dispatchFunction = useDispatch();
+    function changeStatusHandler(type){
+        if (type === 'ushibRanaOgr') {
+            dispatchFunction({type: 'ushibRanaOgr'});
+        } else if (type === 'ushibRanaNoogr') {
+            dispatchFunction({type: 'ushibRanaNoogr'});
+        }
+    }
+
     return (
         <div className="side-menu-wrapper">
             <div className="side-menu">
-                <ul>
-                    <li>Главная</li>
-                    <li>Вопросы</li>
-                    <li>Объекты исследований</li>
-                    <li>Обстоятельства дела</li>
-                    <li>Приложения</li>
+                <ul> Дополнительно добавить повреждения:
+                    <li className= {ushibRanaOgr ? 'linkActive': ''} onClick={() => changeStatusHandler('ushibRanaOgr')}>
+                        Ушибленная рана (ограниченная поверхность)
+                    </li>
+                    <li className= {ushibRanaNoogr ? 'linkActive': ''} onClick={() => changeStatusHandler('ushibRanaNoogr')}>
+                        Ушибленная рана (неограниченная поверхность)
+                    </li>
+                    <li>Множесвенные ушибленные раны головы</li>
+                    <li>Перелом плоской кости (ограниченная поверхность)</li>
+                    <li>Перелом плоской кости (неограниченная поверхность)</li>
+                    <li>Укушенное повреждение кожи</li>
+                    
                 </ul>
             </div>
         </div>
