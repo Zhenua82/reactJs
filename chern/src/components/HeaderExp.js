@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { saveAs } from 'file-saver';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, TabStopPosition, TabStopType } from 'docx';
 
+import { useSelector } from 'react-redux';
+
 const HeaderExp = () => {
   // const a = '!!!!!!!!!!!!'; // добавить `${a}`
   const contentRef = useRef(null);
@@ -237,6 +239,11 @@ const HeaderExp = () => {
     }
   };
 
+  //Получаем из хранилища состояние вида экспертизы, личности трупа и пола:
+  const exp = useSelector((state) => state.expNeopState.exp);
+  const neop = useSelector((state) => state.expNeopState.neop);
+  const sex = useSelector((state) => state.expNeopState.sex);
+
   return (
     <div ref={contentRef}>
       <p className="MsoBodyText"><b>ШАПКА С НАЗВАНИЕМ, АДРЕСОМ И КОНТАКТАМИ ОРГАНИЗАЦИИ (УЧРЕЖДЕНИЯ), В КОТОРОЙ ПРОВЕДЕНА ЭКСПЕРТИЗА(ИСЛЕДОВАНИЕ)</b></p>
@@ -247,15 +254,16 @@ const HeaderExp = () => {
         <p className="MsoBodyText"><span className="red">(дата окончания проведения экспертизы)</span></p>
         <p className="MsoBodyText"><span className="red">г. N</span></p>
       </div>
-        <p id="MsoBodyTextIndent" className="MsoBodyTextIndent">На основании постановления <span className="red">(должностное лицо, назначившее экспертизу, его должность и ФИО)</span> от <span className="red">(дата)</span>, поступившего <span className="red">(дата)</span>, судебно-медицинский эксперт  <span className="red">(комиссия судебно-медицинских экспертов) (ФИО)</span>, <span className="red">(должность - врач - судебно-медицинский эксперт)</span>, имеющий высшее медицинское образование, специальную подготовку по судебной медицине, стаж работы по специальности <span className="red">... лет, квалификационная категория, ученая степень, ученое звание</span>, в период с <span className="red">(время, дата)</span> до <span className="red">(время, дата)</span> провел <span className="red">(провели)</span> судебно-медицинскую экспертизу трупа <span className="red">(ФИО, дата рождения)</span>.</p>
+        {/* <p id="MsoBodyTextIndent" className="MsoBodyTextIndent">На основании постановления <span className="red">(должностное лицо, назначившее экспертизу, его должность и ФИО)</span> от <span className="red">(дата)</span>, поступившего <span className="red">(дата)</span>, судебно-медицинский эксперт  <span className="red">(комиссия судебно-медицинских экспертов) (ФИО)</span>, <span className="red">(должность - врач - судебно-медицинский эксперт)</span>, имеющий высшее медицинское образование, специальную подготовку по судебной медицине, стаж работы по специальности <span className="red">... лет, квалификационная категория, ученая степень, ученое звание</span>, в период с <span className="red">(время, дата)</span> до <span className="red">(время, дата)</span> провел <span className="red">(провели)</span> судебно-медицинскую экспертизу трупа <span className="red">(ФИО, дата рождения)</span>.</p> */}
+        <p id="MsoBodyTextIndent" className="MsoBodyTextIndent">На основании постановления <span className="red">(должностное лицо, назначившее экспертизу, его должность и ФИО)</span> от <span className="red">(дата)</span>, поступившего <span className="red">(дата)</span>, судебно-медицинский эксперт  <span className="red">(комиссия судебно-медицинских экспертов) (ФИО)</span>, <span className="red">(должность - врач - судебно-медицинский эксперт)</span>, имеющий высшее медицинское образование, специальную подготовку по судебной медицине, стаж работы по специальности <span className="red">... лет, квалификационная категория, ученая степень, ученое звание</span>, в период с <span className="red">(время, дата)</span> до <span className="red">(время, дата)</span> провел <span className="red">(провели)</span> судебно-медицинскую экспертизу трупа {((neop === 'неизвестен') && (sex === 'женский') && (<span className="MsoBodyTextIndent">неопознанной женщины</span>)) || ((neop === 'неизвестен') && (sex === 'мужской') && (<span className="MsoBodyTextIndent">неопознанного мужчины</span>)) || ((neop === 'известен') && (<span className="red">(ФИО, дата рождения)</span>))}.</p>
       <p> </p>
-      <p className="MsoBodyTextIndent"><b><i>Права и ответственность эксперта, предусмотренные ст. 57 УПК РФ, мне разъяснены. Об уголовной ответственности за дачу заведомо ложного заключения в соответствии со ст.307 УК РФ предупрежден.</i></b></p>
+      <p id="MsoBodyTextIndent" className="MsoBodyTextIndent"><b><i>Права и ответственность эксперта, предусмотренные ст. 57 УПК РФ, мне разъяснены. Об уголовной ответственности за дачу заведомо ложного заключения в соответствии со ст.307 УК РФ предупрежден.</i></b></p>
       <p> </p>
-      <p className="MsoBodyTextIndent"><b><i>Эксперт: <span className="red">(подпись фамилия и инициалы дата)</span></i></b></p>
+      <p className="MsoBodyText"><b><i>Эксперт: <span className="red">(подпись фамилия и инициалы дата)</span></i></b></p>
       <p> </p>
       <p id="MsoBodyTextIndent">При экспертизе присутствовали: <span className="red">следователь (фамилия и инициалы), санитар (фамилия и инициалы) с целью оказания технической помощи.</span></p>
       <br></br>
-      <button onClick={generateDocument}>Сохранить все</button>
+      {/* <button onClick={generateDocument}>Сохранить все</button> */}
     </div>
   );
 };

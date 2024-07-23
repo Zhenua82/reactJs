@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { saveAs } from 'file-saver';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, TabStopPosition, TabStopType } from 'docx';
 
+import { useSelector } from 'react-redux';
+
 const HeaderSpec = () => {
   // const a = '!!!!!!!!!!!!'; // добавить `${a}`
   const contentRef = useRef(null);
@@ -185,6 +187,11 @@ const HeaderSpec = () => {
     }
   };
 
+  //Получаем из хранилища состояние вида экспертизы, личности трупа и пола:
+  const exp = useSelector((state) => state.expNeopState.exp);
+  const neop = useSelector((state) => state.expNeopState.neop);
+  const sex = useSelector((state) => state.expNeopState.sex);
+
   return (
     <div ref={contentRef}>
       <p className="MsoBodyText"><b>ШАПКА С НАЗВАНИЕМ, АДРЕСОМ И КОНТАКТАМИ ОРГАНИЗАЦИИ (УЧРЕЖДЕНИЯ), В КОТОРОЙ ПРОВЕДЕНА ЭКСПЕРТИЗА(ИСЛЕДОВАНИЕ)</b></p>
@@ -195,9 +202,10 @@ const HeaderSpec = () => {
         <p className="MsoBodyText"><span className="red">(дата окончания проведения исследования)</span></p>
         <p className="MsoBodyText"><span className="red">г. N</span></p>
       </div>
-        <p id="MsoBodyTextIndent" className="MsoBodyTextIndent">На основании письменного поручения <span className="red"> (направления) (должностное лицо, назначившее исследование, его должность и ФИО)</span> от <span className="red">(дата)</span>, поступившего <span className="red">(дата)</span>, специалист  <span className="red">(комиссия специалистов) (ФИО)</span>, <span className="red">(должность - врач - судебно-медицинский эксперт)</span>, имеющий высшее медицинское образование, специальную подготовку по судебной медицине, стаж работы по специальности <span className="red">... лет, квалификационная категория, ученая степень, ученое звание</span>, в период с <span className="red">(время, дата)</span> до <span className="red">(время, дата)</span> в соответствии с ч. 1 статьи 144 УПК РФ провел <span className="red">(провели)</span> судебно-медицинское исследование трупа <span className="red">(ФИО, дата рождения)</span>.</p>
+        {/* <p id="MsoBodyTextIndent" className="MsoBodyTextIndent">На основании письменного поручения <span className="red"> (направления) (должностное лицо, назначившее исследование, его должность и ФИО)</span> от <span className="red">(дата)</span>, поступившего <span className="red">(дата)</span>, специалист  <span className="red">(комиссия специалистов) (ФИО)</span>, <span className="red">(должность - врач - судебно-медицинский эксперт)</span>, имеющий высшее медицинское образование, специальную подготовку по судебной медицине, стаж работы по специальности <span className="red">... лет, квалификационная категория, ученая степень, ученое звание</span>, в период с <span className="red">(время, дата)</span> до <span className="red">(время, дата)</span> в соответствии с ч. 1 статьи 144 УПК РФ провел <span className="red">(провели)</span> судебно-медицинское исследование трупа <span className="red">(ФИО, дата рождения)</span>.</p> */}
+        <p id="MsoBodyTextIndent" className="MsoBodyTextIndent">На основании письменного поручения <span className="red"> (направления) (должностное лицо, назначившее исследование, его должность и ФИО)</span> от <span className="red">(дата)</span>, поступившего <span className="red">(дата)</span>, специалист  <span className="red">(комиссия специалистов) (ФИО)</span>, <span className="red">(должность - врач - судебно-медицинский эксперт)</span>, имеющий высшее медицинское образование, специальную подготовку по судебной медицине, стаж работы по специальности <span className="red">... лет, квалификационная категория, ученая степень, ученое звание</span>, в период с <span className="red">(время, дата)</span> до <span className="red">(время, дата)</span> в соответствии с ч. 1 статьи 144 УПК РФ провел <span className="red">(провели)</span> судебно-медицинское исследование трупа {((neop === 'неизвестен') && (sex === 'женский') && (<span className="MsoBodyTextIndent">неопознанной женщины</span>)) || ((neop === 'неизвестен') && (sex === 'мужской') && (<span className="MsoBodyTextIndent">неопознанного мужчины</span>)) || ((neop === 'известен') && (<span className="red">(ФИО, дата рождения)</span>))}.</p>
       <p> </p>
-      <button onClick={generateDocument}>Сохранить все</button>
+      {/* <button onClick={generateDocument}>Сохранить все</button> */}
     </div>
   );
 };

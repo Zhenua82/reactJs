@@ -2,7 +2,14 @@ import styles from './FormPoisk.module.css'
 import React, {useState} from 'react';
 import Header from '../components/Header';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { expNeopStatee } from '../store/index';
+
 const FormPoisk = (props) => {
+    // const exp = useSelector((state) => state.expNeopState.exp);
+    // const neop = useSelector((state) => state.expNeopState.neop);
+    const dispatchFunction = useDispatch();
+    
     const [vid, setVid] = useState('');
     const [diagnoz, setDiagnoz] = useState('');
     const [sex, setSex] = useState('');
@@ -56,6 +63,10 @@ const FormPoisk = (props) => {
         setInvalidFields({});
         // Передаем полученные из формы данные наверх:
         props.onChangeData(dataForm);
+        //Передаем состояние вида исследования, личности трупа и пола в хранилище:
+        dispatchFunction(expNeopStatee.exp(dataForm.vid));
+        dispatchFunction(expNeopStatee.neop(dataForm.izvesten)); 
+        dispatchFunction(expNeopStatee.sex(dataForm.sex));
     };
 
     return (
@@ -75,8 +86,9 @@ const FormPoisk = (props) => {
                     <label>Судебно-медицинский диагноз</label>
                     <select onChange={diagnozHandler} value={diagnoz} className={invalidFields.diagnoz ? styles.invalid : ''}>
                         <option value="">Выберите диагноз</option>
-                        <option value="ИБС">ИБС</option>
-                        <option value="отравление">Отравление</option> 
+                        <option value="ИБС Внезапная коронарная смерть">ИБС Внезапная коронарная смерть</option>
+                        <option value="отравление нефтепродуктами">Отравление нефтепродуктами</option>
+                        <option value="эксперимент">Эксперимент</option>
                     </select>
                 </div> 
                 <div className={styles.exemp}>
@@ -90,7 +102,7 @@ const FormPoisk = (props) => {
                 <div className={styles.exemp}>
                     <label>Личность трупа</label>
                     <select onChange={izvestenHandler} value={izvesten} className={invalidFields.izvesten ? styles.invalid : ''}>
-                        <option value="">Личность трупа установлена или нет</option>
+                        <option value="">Труп опознан или нет</option>
                         <option value="известен">да</option>
                         <option value="неизвестен">нет</option>
                     </select>
