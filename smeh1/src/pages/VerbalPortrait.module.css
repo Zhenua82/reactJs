@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%; /* Вы можете настроить ширину по мере необходимости */
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%; /* Обеспечивает адаптивность изображений */
+}
+
+.link {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    text-decoration: underline;
+}

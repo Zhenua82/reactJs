@@ -1,0 +1,65 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0f7fa;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 19;
+}
+
+.logo {
+    /* height: 150px; */
+    height: 110px;
+    width: auto;
+    border-radius: 20px
+}
+
+.nav {
+    display: flex;
+    gap: 80px;
+}
+
+.link {
+    color: #1f78b3;
+    text-decoration: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+.linkActive{
+    text-shadow: 0 0 10px #fa5555, 0 0 20px #fa5555, 0 0 30px #fa5555;
+}
+
+.link:hover {
+    color: #34495e;
+}
+
+.dateTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+}
+
+.date {
+    margin-bottom: 5px; /* Отступ между датой и временем */
+}
+
+@media (max-width: 1088px) {
+    .nav {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 920px) {
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 40px; /* Отступы между элементами */
+    }
+}

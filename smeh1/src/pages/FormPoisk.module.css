@@ -1,0 +1,59 @@
+.commun {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.exemp {
+    margin: 10px;
+    width: 100%;
+}
+
+.exemp select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.exemp select.invalid {
+    background-color: #ffcccc; /* Розовый цвет для невалидных полей */
+}
+
+.buttonForm {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.buttonForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.buttonForm button:hover {
+    transform: scale(1.1); /* Увеличение размера при наведении */
+}
+
+@media (min-width: 768px) {
+    .commun {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .buttonForm {
+        grid-column: 2;
+    }
+}

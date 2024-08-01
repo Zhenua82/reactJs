@@ -4,14 +4,15 @@ import { saveAs } from 'file-saver';
 import {Route, Switch, useHistory, Redirect} from 'react-router-dom';
 
 import FormPoisk from "./pages/FormPoisk";
-import HomeDuble from "./pages/HomeDuble";
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import Help from "./pages/Help";
 import InJob from "./pages/InJob";
 import Spravka from "./pages/Spravka";
 import VerbalPortrait from "./pages/VerbalPortrait";
+
 import Pay from './pages/Pay';
-import PayFinish from './pages/PayFinish';
+import { useSelector} from 'react-redux';
+
 
 import Experiment from "./pages/Experiment";
 import IbsVksF from "./pages/IbsVksF";
@@ -22,9 +23,9 @@ import OtravlenieNeftF from "./pages/OtravlenieNeftF";
 
 
 
-
 const App = () => {
   const history = useHistory();
+  // const popup = useSelector((state) => state.expNeopState.popup);
 
   function onChangeData(dataForm){
     console.log(dataForm)
@@ -199,13 +200,10 @@ const App = () => {
     <>
     <Switch> 
       <Route path='/' exact>
-        <Redirect to='/homeDuble'/>
+        <Redirect to='/home'/>
       </Route>
       <Route path='/home'>
         <Home/>
-      </Route>
-      <Route path='/homeDuble'>
-        <HomeDuble/>
       </Route>
       <Route path='/search'>
         <FormPoisk onChangeData={onChangeData}></FormPoisk>
@@ -221,9 +219,6 @@ const App = () => {
       </Route>
       <Route path='/pay' exact>
         <Pay/>
-      </Route>
-      <Route path='/payFinish' exact>
-        <PayFinish/>
       </Route>
       
 

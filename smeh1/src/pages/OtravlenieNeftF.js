@@ -5,29 +5,15 @@ import HeaderExp from "../components/HeaderExp";
 import HeaderSpec from "../components/HeaderSpec";
 import SideMenu from "../components/SideMenu";
 
-import React, { useRef, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import Popup from '../components/Popup';
-import { expNeopStatee } from '../store/index';
-import { useHistory } from 'react-router-dom';
+import React, { useRef } from "react";
+
+import { useSelector } from 'react-redux';
 
 function OtravlenieNeftF(props){
-    const history = useHistory();
-    const dispatchFunction = useDispatch();
-    const money = useSelector((state) => state.expNeopState.money);
+
     const contentRef = useRef(null);
-
-    useEffect(() => {
-        if (money === true) {
-            props.peredacha();
-            dispatchFunction(expNeopStatee.money(false));
-        } 
-    }, [money, dispatchFunction, props]);
-
     function generateDocument(){
-        // props.peredacha()
-        dispatchFunction(expNeopStatee.popup(true));
-        // history.push('/pay') //Отдельная страница   
+        props.peredacha()
     }
       
     //Получаем из хранилища состояния доп. повреждений:
@@ -40,7 +26,6 @@ function OtravlenieNeftF(props){
     const exp = useSelector((state) => state.expNeopState.exp);
     const neop = useSelector((state) => state.expNeopState.neop);
     const sex = useSelector((state) => state.expNeopState.sex);
-    const popup = useSelector((state) => state.expNeopState.popup);
 
     return (
         <>
@@ -251,7 +236,6 @@ function OtravlenieNeftF(props){
                     Сохранить <br></br> составленное <br></br> заключение <br></br>в Word (.docx)
                 </button>
                 <div className="overlay"></div> {/* Overlay to block clicks */}
-                {(popup === true) && <Popup/>} 
             </div>
         </>
     )

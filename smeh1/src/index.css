@@ -140,21 +140,3 @@ body {
   right: 10px;
   font-size: 30px;
 }
-
-.finishPay{
-  width: 80%;
-  margin: auto;
-  margin-top: 190px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center
-}
-.finishPay h2{
-  color:#0056b3;
-  text-align: center;
-}
-
-.finishPay img{
-  border: 1px solid black;
-}

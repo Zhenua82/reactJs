@@ -1,7 +1,7 @@
 // import { legacy_createStore } from 'redux';
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-const initialState = {ushibRanaOgr: false, ushibRanaNoogr: false, bampPerelom: false, krovopodtek: false, ssadiny: false, krovUpr: false};
+const initialState = {ushibRanaOgr: false, ushibRanaNoogr: false};
 
 const dopPovrezhden = createSlice({
     name: 'dopPovrezhden',
@@ -9,22 +9,17 @@ const dopPovrezhden = createSlice({
     reducers: {
         ushibRanaOgr(state) {state.ushibRanaOgr = !state.ushibRanaOgr;},
         ushibRanaNoogr(state) {state.ushibRanaNoogr = !state.ushibRanaNoogr;},
-        bampPerelom(state) {state.bampPerelom = !state.bampPerelom;},
-        krovopodtek(state) {state.krovopodtek = !state.krovopodtek;},
-        ssadiny(state) {state.ssadiny = !state.ssadiny;},
-        krovUpr(state) {state.krovUpr = !state.krovUpr;},
     }
 });
 
 const expNeopState = createSlice({
     name: 'expNeopState',
-    initialState: {exp: '', neop: '', sex: '', popup: false, money: false},
+    initialState: {exp: '', neop: '', sex: '', popup: false},
     reducers: {
         exp(state, action) {state.exp = action.payload;},
         neop(state, action) {state.neop = action.payload;},
         sex(state, action) {state.sex = action.payload},
         popup(state, action) {state.popup = action.payload},
-        money(state, action) {state.money = action.payload},
     }
 });
 
