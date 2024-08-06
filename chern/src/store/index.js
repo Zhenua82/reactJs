@@ -1,7 +1,8 @@
 // import { legacy_createStore } from 'redux';
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-const initialState = {ushibRanaOgr: false, ushibRanaNoogr: false, bampPerelom: false, krovopodtek: false, ssadiny: false, krovUpr: false};
+const initialState = {ushibRanaOgr: false, ushibRanaNoogr: false, bampPerelom: false, krovopodtek: false, ssadiny: false, krovUpr: false, rezanRana: false, ushib: false, 
+    colotoRez: false, mnogo: false, ognestrelMnozh: false, ognestrelOdin: false, colotayaRana: false, ushibRanaMk: false, ozhogiMk: false, ozhogPlamenem: false};
 
 const dopPovrezhden = createSlice({
     name: 'dopPovrezhden',
@@ -13,6 +14,16 @@ const dopPovrezhden = createSlice({
         krovopodtek(state) {state.krovopodtek = !state.krovopodtek;},
         ssadiny(state) {state.ssadiny = !state.ssadiny;},
         krovUpr(state) {state.krovUpr = !state.krovUpr;},
+        rezanRana(state) {state.rezanRana = !state.rezanRana;},
+        ushib(state) {state.ushib = !state.ushib;},
+        colotoRez(state) {state.colotoRez = !state.colotoRez;},
+        mnogo(state) {state.mnogo = !state.mnogo;},
+        ognestrelMnozh(state) {state.ognestrelMnozh = !state.ognestrelMnozh;},
+        ognestrelOdin(state) {state.ognestrelOdin = !state.ognestrelOdin;},
+        colotayaRana(state) {state.colotayaRana = !state.colotayaRana;},
+        ushibRanaMk(state) {state.ushibRanaMk = !state.ushibRanaMk;},
+        ozhogiMk(state) {state.ozhogiMk = !state.ozhogiMk;},
+        ozhogPlamenem(state) {state.ozhogPlamenem = !state.ozhogPlamenem;},
     }
 });
 

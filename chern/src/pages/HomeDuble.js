@@ -44,7 +44,17 @@ function HomeDuble() {
             data.krovopodtek && dispatchFunction(dopPovrezhdenia.krovopodtek());
             data.ssadiny && dispatchFunction(dopPovrezhdenia.ssadiny());
             data.krovUpr && dispatchFunction(dopPovrezhdenia.krovUpr());
-            
+            data.rezanRana && dispatchFunction(dopPovrezhdenia.rezanRana());
+            data.ushib && dispatchFunction(dopPovrezhdenia.ushib());
+            data.colotoRez && dispatchFunction(dopPovrezhdenia.colotoRez());
+            data.mnogo && dispatchFunction(dopPovrezhdenia.mnogo());
+            data.ognestrelMnozh && dispatchFunction(dopPovrezhdenia.ognestrelMnozh());
+            data.ognestrelOdin && dispatchFunction(dopPovrezhdenia.ognestrelOdin());
+            data.colotayaRana && dispatchFunction(dopPovrezhdenia.colotayaRana());
+            data.ushibRanaMk && dispatchFunction(dopPovrezhdenia.ushibRanaMk());
+            data.ozhogiMk && dispatchFunction(dopPovrezhdenia.ozhogiMk());
+            data.ozhogPlamenem && dispatchFunction(dopPovrezhdenia.ozhogPlamenem());
+
             //Перенаправление на страницу url которой сохранен в localstorage:
             // window.open(localStorage.getItem('url'));
             // history.push(localStorage.getItem('url', '_blank'));

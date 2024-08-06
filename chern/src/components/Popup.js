@@ -18,6 +18,16 @@ function Popup() {
     const krovopodtek = useSelector((state) => state.dopPovrezhden.krovopodtek);
     const ssadiny = useSelector((state) => state.dopPovrezhden.ssadiny);
     const krovUpr = useSelector((state) => state.dopPovrezhden.krovUpr);
+    const rezanRana = useSelector((state) => state.dopPovrezhden.rezanRana);
+    const ushib = useSelector((state) => state.dopPovrezhden.ushib);
+    const colotoRez = useSelector((state) => state.dopPovrezhden.colotoRez);
+    const mnogo = useSelector((state) => state.dopPovrezhden.mnogo);
+    const ognestrelMnozh = useSelector((state) => state.dopPovrezhden.ognestrelMnozh);
+    const ognestrelOdin = useSelector((state) => state.dopPovrezhden.ognestrelOdin);
+    const colotayaRana = useSelector((state) => state.dopPovrezhden.colotayaRana);
+    const ushibRanaMk = useSelector((state) => state.dopPovrezhden.ushibRanaMk);
+    const ozhogiMk = useSelector((state) => state.dopPovrezhden.ozhogiMk);
+    const ozhogPlamenem = useSelector((state) => state.dopPovrezhden.ozhogPlamenem);
 
     function redirectToYooMoney() {
         // Установка cookie перед редиректом
@@ -31,7 +41,8 @@ function Popup() {
         localStorage.setItem('url', window.location.pathname);
 
         // Установка в localStorage данных хранилища текущей страницы:
-        const data = {exp, neop, sex, ushibRanaOgr, ushibRanaNoogr, bampPerelom, krovopodtek, ssadiny, krovUpr};
+        const data = {exp, neop, sex, ushibRanaOgr, ushibRanaNoogr, bampPerelom, krovopodtek, ssadiny, krovUpr, rezanRana, ushib, colotoRez, mnogo, ognestrelMnozh, 
+            ognestrelOdin, colotayaRana, ushibRanaMk, ozhogiMk, ozhogPlamenem};
         localStorage.setItem('data', JSON.stringify(data));
 
         // Открытие нового окна/вкладки для редиректа на yoomoney.ru
