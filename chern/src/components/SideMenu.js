@@ -21,6 +21,9 @@ function SideMenu() {
     const ushibRanaMk = useSelector((state) => state.dopPovrezhden.ushibRanaMk);
     const ozhogiMk = useSelector((state) => state.dopPovrezhden.ozhogiMk);
     const ozhogPlamenem = useSelector((state) => state.dopPovrezhden.ozhogPlamenem);
+    const ploskKostjOgr = useSelector((state) => state.dopPovrezhden.ploskKostjOgr);
+    const ploskKostjNoogr = useSelector((state) => state.dopPovrezhden.ploskKostjNoogr);
+    const colotoRezMk = useSelector((state) => state.dopPovrezhden.colotoRezMk);
     
     const dispatchFunction = useDispatch();
     function changeStatusHandler(type){
@@ -56,6 +59,12 @@ function SideMenu() {
             dispatchFunction(dopPovrezhdenia.ozhogiMk());
         }else if (type === 'ozhogPlamenem') {
             dispatchFunction(dopPovrezhdenia.ozhogPlamenem());
+        }else if (type === 'ploskKostjOgr') {
+            dispatchFunction(dopPovrezhdenia.ploskKostjOgr());
+        }else if (type === 'ploskKostjNoogr') {
+            dispatchFunction(dopPovrezhdenia.ploskKostjNoogr());
+        }else if (type === 'colotoRezMk') {
+            dispatchFunction(dopPovrezhdenia.colotoRezMk());
         }
     }
 
@@ -93,11 +102,20 @@ function SideMenu() {
                     <li className= {colotoRez ? 'linkActive': ''} onClick={() => changeStatusHandler('colotoRez')}>
                         Колото-резаное ранение
                     </li>
+                    <li className= {colotoRezMk ? 'linkActive': ''} onClick={() => changeStatusHandler('colotoRezMk')}>
+                        Колото-резаное ранение + мед. крим. (нож, одежда, хрящевая часть ребра):
+                    </li>
                     <li className= {ognestrelOdin ? 'linkActive': ''} onClick={() => changeStatusHandler('ognestrelOdin')}>
                         Одиночное огнестрельное  ранение (ПМ)
                     </li>
                     <li className= {ognestrelMnozh ? 'linkActive': ''} onClick={() => changeStatusHandler('ognestrelMnozh')}>
                         Множественные огнестрельные  ранения (АК-74)
+                    </li>
+                    <li className= {ploskKostjOgr ? 'linkActive': ''} onClick={() => changeStatusHandler('ploskKostjOgr')}>
+                        Перелом плоской кости (ограниченная поверхность)
+                    </li>
+                    <li className= {ploskKostjNoogr ? 'linkActive': ''} onClick={() => changeStatusHandler('ploskKostjNoogr')}>
+                        Перелом плоской кости + мед. крим. (неограниченная поверхность)
                     </li>
                     <li className= {bampPerelom ? 'linkActive': ''} onClick={() => changeStatusHandler('bampPerelom')}>
                         Бампер-перелом

@@ -54,6 +54,9 @@ function HomeDuble() {
             data.ushibRanaMk && dispatchFunction(dopPovrezhdenia.ushibRanaMk());
             data.ozhogiMk && dispatchFunction(dopPovrezhdenia.ozhogiMk());
             data.ozhogPlamenem && dispatchFunction(dopPovrezhdenia.ozhogPlamenem());
+            data.ploskKostjOgr && dispatchFunction(dopPovrezhdenia.ploskKostjOgr());
+            data.ploskKostjNoogr && dispatchFunction(dopPovrezhdenia.ploskKostjNoogr());
+            data.colotoRezMk && dispatchFunction(dopPovrezhdenia.colotoRezMk());
 
             //Перенаправление на страницу url которой сохранен в localstorage:
             // window.open(localStorage.getItem('url'));

@@ -67,7 +67,15 @@ import OzhogPlamenemVnutr from '../povrezhdenia/ozhogPlamenem/OzhogPlamenemVnutr
 import OzhogPlamenemLab from '../povrezhdenia/ozhogPlamenem/OzhogPlamenemLab';
 import OzhogPlamenemDiagnoz from '../povrezhdenia/ozhogPlamenem/OzhogPlamenemDiagnoz';
 import OzhogPlamenemVyvody from '../povrezhdenia/ozhogPlamenem/OzhogPlamenemVyvody';
-
+import PloskKostjOgrLab from '../povrezhdenia/ploskKostjOgr/PloskKostjOgrLab';
+import PloskKostjOgrDiagnoz from '../povrezhdenia/ploskKostjOgr/PloskKostjOgrDiagnoz';
+import PloskKostjOgrVyvody from '../povrezhdenia/ploskKostjOgr/PloskKostjOgrVyvody';
+import PloskKostjNoogrLab from '../povrezhdenia/ploskKostjNoogr/PloskKostjNoogrLab';
+import PloskKostjNoogrDiagnoz from '../povrezhdenia/ploskKostjNoogr/PloskKostjNoogrDiagnoz';
+import PloskKostjNoogrVyvody from '../povrezhdenia/ploskKostjNoogr/PloskKostjNoogrVyvody';
+import ColotoRezMkLab from '../povrezhdenia/colotoRezMk/ColotoRezMkLab';
+import ColotoRezMkDiagnoz from '../povrezhdenia/colotoRezMk/ColotoRezMkDiagnoz';
+import ColotoRezMkVyvody from '../povrezhdenia/colotoRezMk/ColotoRezMkVyvody';
 
 function OtravlenieNeftM(props) {
     const history = useHistory();
@@ -105,6 +113,9 @@ function OtravlenieNeftM(props) {
     const ushibRanaMk = useSelector((state) => state.dopPovrezhden.ushibRanaMk);
     const ozhogiMk = useSelector((state) => state.dopPovrezhden.ozhogiMk);
     const ozhogPlamenem = useSelector((state) => state.dopPovrezhden.ozhogPlamenem);
+    const ploskKostjOgr = useSelector((state) => state.dopPovrezhden.ploskKostjOgr);
+    const ploskKostjNoogr = useSelector((state) => state.dopPovrezhden.ploskKostjNoogr);
+    const colotoRezMk = useSelector((state) => state.dopPovrezhden.colotoRezMk);
     
 
     //Получаем из хранилища состояние вида экспертизы личности трупа и пола:
@@ -295,8 +306,14 @@ function OtravlenieNeftM(props) {
                     {/* Доп повреждения: */}
                     {/* Ушибл рана и перелом плоской кости (мед крим): */}
                     {ushibRanaMk && <UshibRanaMkLab/>}
+                    {/* Колото-резаное ранение + мед. крим.: */}
+                    {colotoRezMk && <ColotoRezMkLab/>}
                     {/* Огнестрел множественные: */}
                     {ognestrelMnozh && <OgnestrelMnozhLab/>}
+                    {/* Перелом плоской кости (огр поверхн): */}
+                    {ploskKostjOgr && <PloskKostjOgrLab/>}
+                    {/* Перелом плоской кости - мед. крим. (неогр поверхн): */}
+                    {ploskKostjNoogr && <PloskKostjNoogrLab/>}
                     {/* Бампер-перелом: */}
                     {bampPerelom && <BampPerelomLab/>}
                     {/* Контактные ожоги + мед крим: */}
@@ -346,11 +363,20 @@ function OtravlenieNeftM(props) {
                     {/* Колото-рез: */}
                     {colotoRez && <><ColotoRezDiagnoz/>
                     <br></br></>}
+                    {/* Колото-резаное ранение + мед. крим.: */}
+                    {colotoRezMk && <><ColotoRezMkDiagnoz/>
+                    <br></br></>}
                     {/* Огнестрел одиночное: */}
                     {ognestrelOdin && <><OgnestrelOdinDiagnoz/>
                     <br></br></>}
                     {/* Огнестрел множественные: */}
                     {ognestrelMnozh && <><OgnestrelMnozhDiagnoz/>
+                    <br></br></>}
+                    {/* Перелом плоской кости (огр поверхн): */}
+                    {ploskKostjOgr && <><PloskKostjOgrDiagnoz/>
+                    <br></br></>}
+                    {/* Перелом плоской кости - мед. крим. (неогр поверхн): */}
+                    {ploskKostjNoogr && <><PloskKostjNoogrDiagnoz/>
                     <br></br></>}
                     {/* Бампер-перелом: */}
                     { bampPerelom && <><BampPerelomDiagnoz/>
@@ -412,10 +438,16 @@ function OtravlenieNeftM(props) {
                     {colotayaRana && <ColotayaRanaVyvody/>}
                     {/* Колото-рез: */}
                     {colotoRez && <ColotoRezVyvody/>}
+                    {/* Колото-резаное ранение + мед. крим.: */}
+                    {colotoRezMk && <ColotoRezMkVyvody/>}
                     {/* Огнестрел одиночное: */}
                     {ognestrelOdin && <OgnestrelOdinVyvody/>}
                     {/* Огнестрел множественные: */}
                     {ognestrelMnozh && <OgnestrelMnozhVyvody/>}
+                    {/* Перелом плоской кости (огр поверхн): */}
+                    {ploskKostjOgr && <PloskKostjOgrVyvody/>}
+                    {/* Перелом плоской кости - мед. крим. (неогр поверхн): */}
+                    {ploskKostjNoogr && <PloskKostjNoogrVyvody/>}
                     {/* Бампер-перелом: */}
                     { bampPerelom && <BampPerelomVyvody/>}
                     {/* Контактные ожоги + мед крим: */}

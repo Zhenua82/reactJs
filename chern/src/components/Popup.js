@@ -28,6 +28,9 @@ function Popup() {
     const ushibRanaMk = useSelector((state) => state.dopPovrezhden.ushibRanaMk);
     const ozhogiMk = useSelector((state) => state.dopPovrezhden.ozhogiMk);
     const ozhogPlamenem = useSelector((state) => state.dopPovrezhden.ozhogPlamenem);
+    const ploskKostjOgr = useSelector((state) => state.dopPovrezhden.ploskKostjOgr);
+    const ploskKostjNoogr = useSelector((state) => state.dopPovrezhden.ploskKostjNoogr);
+    const colotoRezMk = useSelector((state) => state.dopPovrezhden.colotoRezMk);
 
     function redirectToYooMoney() {
         // Установка cookie перед редиректом
@@ -42,7 +45,7 @@ function Popup() {
 
         // Установка в localStorage данных хранилища текущей страницы:
         const data = {exp, neop, sex, ushibRanaOgr, ushibRanaNoogr, bampPerelom, krovopodtek, ssadiny, krovUpr, rezanRana, ushib, colotoRez, mnogo, ognestrelMnozh, 
-            ognestrelOdin, colotayaRana, ushibRanaMk, ozhogiMk, ozhogPlamenem};
+            ognestrelOdin, colotayaRana, ushibRanaMk, ozhogiMk, ozhogPlamenem, ploskKostjOgr, ploskKostjNoogr, colotoRezMk};
         localStorage.setItem('data', JSON.stringify(data));
 
         // Открытие нового окна/вкладки для редиректа на yoomoney.ru
