@@ -24,6 +24,7 @@ function SideMenu() {
     const ploskKostjOgr = useSelector((state) => state.dopPovrezhden.ploskKostjOgr);
     const ploskKostjNoogr = useSelector((state) => state.dopPovrezhden.ploskKostjNoogr);
     const colotoRezMk = useSelector((state) => state.dopPovrezhden.colotoRezMk);
+    const ognestrelPya = useSelector((state) => state.dopPovrezhden.ognestrelPya);
     
     const dispatchFunction = useDispatch();
     function changeStatusHandler(type){
@@ -65,6 +66,8 @@ function SideMenu() {
             dispatchFunction(dopPovrezhdenia.ploskKostjNoogr());
         }else if (type === 'colotoRezMk') {
             dispatchFunction(dopPovrezhdenia.colotoRezMk());
+        }else if (type === 'ognestrelPya') {
+            dispatchFunction(dopPovrezhdenia.ognestrelPya());
         }
     }
 
@@ -91,7 +94,7 @@ function SideMenu() {
                         Ушибленная рана + перелом плоской кости (мед. крим.)
                     </li>
                     <li className= {mnogo ? 'linkActive': ''} onClick={() => changeStatusHandler('mnogo')}>
-                        Множество повреждений (кровоподтеки, ссадины, перелом зуба, ушиб рана)
+                        Множество повреждений (кровоподтеки, ссадины, перелом зуба, ушибленная рана)
                     </li>
                     <li className= {rezanRana ? 'linkActive': ''} onClick={() => changeStatusHandler('rezanRana')}>
                         Peзаные раны
@@ -108,8 +111,11 @@ function SideMenu() {
                     <li className= {ognestrelOdin ? 'linkActive': ''} onClick={() => changeStatusHandler('ognestrelOdin')}>
                         Одиночное огнестрельное  ранение (ПМ)
                     </li>
+                    <li className= {ognestrelPya ? 'linkActive': ''} onClick={() => changeStatusHandler('ognestrelPya')}>
+                        Одиночное огнестрельное  ранение + мед. крим. (ПЯ)
+                    </li>
                     <li className= {ognestrelMnozh ? 'linkActive': ''} onClick={() => changeStatusHandler('ognestrelMnozh')}>
-                        Множественные огнестрельные  ранения (АК-74)
+                        Множественные огнестрельные  ранения + мед. крим. (АК-74)
                     </li>
                     <li className= {ploskKostjOgr ? 'linkActive': ''} onClick={() => changeStatusHandler('ploskKostjOgr')}>
                         Перелом плоской кости (ограниченная поверхность)
@@ -129,9 +135,6 @@ function SideMenu() {
                     <li className= {ushib ? 'linkActive': ''} onClick={() => changeStatusHandler('ushib')}>
                         "Ушиб" (отсутствие повреждений)
                     </li>
-                    <li>Перелом плоской кости (ограниченная поверхность)</li>
-                    <li>Перелом плоской кости (неограниченная поверхность)</li>
-                    <li>Укушенное повреждение кожи</li>                 
                 </ul>
             </div>
         </div>

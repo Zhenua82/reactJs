@@ -6,6 +6,11 @@ import {useHistory} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { expNeopStatee, dopPovrezhdenia } from '../store/index';
 
+import imgSlide11 from '../assets/slide11.JPG'
+import imgSlide2 from '../assets/slide2.JPG'
+import imgSlide33 from '../assets/slide33.JPG'
+import Footer from "../components/Footer";
+import { NavLink } from 'react-router-dom';
 
 function HomeDuble() {
     const dispatchFunction = useDispatch();
@@ -57,6 +62,7 @@ function HomeDuble() {
             data.ploskKostjOgr && dispatchFunction(dopPovrezhdenia.ploskKostjOgr());
             data.ploskKostjNoogr && dispatchFunction(dopPovrezhdenia.ploskKostjNoogr());
             data.colotoRezMk && dispatchFunction(dopPovrezhdenia.colotoRezMk());
+            data.ognestrelPya && dispatchFunction(dopPovrezhdenia.ognestrelPya());
 
             //Перенаправление на страницу url которой сохранен в localstorage:
             // window.open(localStorage.getItem('url'));
@@ -75,8 +81,17 @@ function HomeDuble() {
     return (
         <>
             <Header></Header>
-            <h1>Конструктор заключений по судебно-медицинской экспертизе (исследованию) трупа</h1>
+            <h1 className={styles.h1Home}>Конструктор заключений по судебно-медицинской экспертизе (исследованию) трупа</h1>
             {money && <p>Оплата прошла успешно!</p>}
+            <img src={imgSlide11} alt="Word" className={styles.imgHome}/>
+            <NavLink className={styles.link} to='/search'><button className={styles.btnHome}>Начать работу</button></NavLink>
+            <img src={imgSlide2} alt="Word" className={styles.imgHome}/>
+            {/* <h2> zzhmenka@yandex.ru</h2> */}
+            <h2 className={styles.h2Home}>
+                <a href="mailto:zzhmenka@yandex.ru">zzhmenka@yandex.ru</a>
+            </h2>
+            <img src={imgSlide33} alt="Word" className={styles.imgHome}/>
+            <Footer></Footer> 
         </>
     );
 }

@@ -8,10 +8,12 @@ import HomeDuble from "./pages/HomeDuble";
 import Home from './pages/Home';
 import Help from "./pages/Help";
 import InJob from "./pages/InJob";
-import Spravka from "./pages/Spravka";
-import VerbalPortrait from "./pages/VerbalPortrait";
 import Pay from './pages/Pay';
 import PayFinish from './pages/PayFinish';
+import Spravka from "./pages/Spravka";
+
+import VerbalPortrait from "./pages/spravka/VerbalPortrait";
+import RukDok from "./pages/spravka/RukDok";
 
 import Experiment from "./pages/Experiment";
 import IbsVksF from "./pages/IbsVksF";
@@ -19,6 +21,8 @@ import IbsVksM from "./pages/IbsVksM";
 import IbsVksExp from "./pages/IbsVksExp";
 import OtravlenieNeftM from "./pages/OtravlenieNeftM";
 import OtravlenieNeftF from "./pages/OtravlenieNeftF";
+import Vozrast from './pages/spravka/Vozrast';
+import Davnostj from './pages/spravka/Davnostj';
 
 
 
@@ -213,17 +217,27 @@ const App = () => {
       <Route path='/help'>
         <Help/>
       </Route>
-      <Route path='/info' exact>
-        <Spravka/>
-      </Route>
-      <Route path='/info/verbalPortrait' exact>
-        <VerbalPortrait/>
-      </Route>
       <Route path='/pay' exact>
         <Pay/>
       </Route>
       <Route path='/payFinish' exact>
         <PayFinish/>
+      </Route>
+      <Route path='/info' exact>
+        <Spravka/>
+      </Route>
+
+      <Route path='/info/verbalPortrait' exact>
+        <VerbalPortrait/>
+      </Route>
+      <Route path='/info/rukDok' exact>
+        <RukDok/>
+      </Route>
+      <Route path='/info/vozrast' exact>
+        <Vozrast/>
+      </Route>
+      <Route path='/info/davnostj' exact>
+        <Davnostj/>
       </Route>
       
 

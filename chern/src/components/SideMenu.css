@@ -9,18 +9,19 @@
 }
 
 .side-menu {
-    height: 100%;
+    height: 91.5%;
     width: 20%;
     background-color: #e0f7fa;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     pointer-events: auto; /* Включение кликов только для меню */
+    overflow-y: auto; /* Добавление вертикальной прокрутки */
+    overflow-x: hidden; /* Отключение горизонтальной прокрутки */
 }
 
 .side-menu ul {
     list-style-type: none;
     padding: 0;
-    /* margin-top: 200px; */
     margin-top: 130px; 
     font-size: 16px;
     color: #1f78b3;

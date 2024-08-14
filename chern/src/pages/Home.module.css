@@ -1,3 +1,97 @@
-h1{
+.pergamentWrap {
+    background-image: url('../assets/perg2.webp');
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+.wraperHome {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+/* .h3Home {
+    font-size: 1.2vw;
+    font-size: 20px;
+    text-indent: 2em;
+    text-align: justify;
+    width: 100%; 
+} */
+
+.h1Home {
+    margin-top: 200px;
+    color: #34495e;
     text-align: center;
+    font-size: 40px;
+}
+
+.h2Home {
+    color: #34495e;
+    text-align: center;
+}
+
+
+
+.imgHome{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+a{
+    color: #34495e;
+    transition: background-color 0.3s ease;
+}
+a:hover{
+    color: purple;
+    transform: scale(1.2);
+}
+.link {
+    text-decoration: none;
+  }
+.btnHome{
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+  }
+.btnHome:hover{
+    background-color: purple;
+    transform: scale(1.2);
+}
+
+/* Для страницы help: */
+.instruct {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Оставляем немного места между колонками */
+    border: 2px solid #ccc; /* Рамка вокруг контейнера */
+    padding: 16px;
+    margin: 8px; /* Отступы между элементами */
+    box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+}
+
+.instruct img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 16px; /* Отступ между текстом и изображением */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Размещаем контейнеры в два столбца */
+    flex-wrap: wrap; /* Если ширина окна уменьшится, контейнеры перейдут на следующую строку */
 }

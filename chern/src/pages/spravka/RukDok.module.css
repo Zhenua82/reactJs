@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ссылки будут выровнены по левому краю контейнера */
+    justify-content: center; /* Центрируем контейнер по вертикали */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    padding: 20px; /* Добавляем отступы внутри контейнера */
+    max-width: 800px; /* Ограничиваем максимальную ширину контейнера */
+    min-height: 80vh; /* Устанавливаем минимальную высоту контейнера для центрирования по вертикали */
+}
+.title {
+    /* text-align: center; */
+    margin: auto;
+    margin-top: 20px;
+    /* margin-bottom: 70px; */
+    margin-bottom: 10px;
+}
+.link {
+    margin-left: 20px; /* Отступ 20px от левого края контейнера */
+    margin-bottom: 10px; /* Добавляем отступ снизу между ссылками */
+    
+}
+.link:hover {
+    transform: none; /* Запрещает увеличение при наведении */
+}

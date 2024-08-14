@@ -3,7 +3,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 const initialState = {ushibRanaOgr: false, ushibRanaNoogr: false, bampPerelom: false, krovopodtek: false, ssadiny: false, krovUpr: false, rezanRana: false, ushib: false, 
     colotoRez: false, mnogo: false, ognestrelMnozh: false, ognestrelOdin: false, colotayaRana: false, ushibRanaMk: false, ozhogiMk: false, ozhogPlamenem: false, 
-    ploskKostjOgr: false, ploskKostjNoogr: false, colotoRezMk: false};
+    ploskKostjOgr: false, ploskKostjNoogr: false, colotoRezMk: false, ognestrelPya: false};
 
 const dopPovrezhden = createSlice({
     name: 'dopPovrezhden',
@@ -28,6 +28,7 @@ const dopPovrezhden = createSlice({
         ploskKostjOgr(state) {state.ploskKostjOgr = !state.ploskKostjOgr;},
         ploskKostjNoogr(state) {state.ploskKostjNoogr = !state.ploskKostjNoogr;},
         colotoRezMk(state) {state.colotoRezMk = !state.colotoRezMk;},
+        ognestrelPya(state) {state.ognestrelPya = !state.ognestrelPya;},
     }
 });
 

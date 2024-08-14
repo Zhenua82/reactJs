@@ -31,6 +31,7 @@ function Popup() {
     const ploskKostjOgr = useSelector((state) => state.dopPovrezhden.ploskKostjOgr);
     const ploskKostjNoogr = useSelector((state) => state.dopPovrezhden.ploskKostjNoogr);
     const colotoRezMk = useSelector((state) => state.dopPovrezhden.colotoRezMk);
+    const ognestrelPya = useSelector((state) => state.dopPovrezhden.ognestrelPya);
 
     function redirectToYooMoney() {
         // Установка cookie перед редиректом
@@ -45,7 +46,7 @@ function Popup() {
 
         // Установка в localStorage данных хранилища текущей страницы:
         const data = {exp, neop, sex, ushibRanaOgr, ushibRanaNoogr, bampPerelom, krovopodtek, ssadiny, krovUpr, rezanRana, ushib, colotoRez, mnogo, ognestrelMnozh, 
-            ognestrelOdin, colotayaRana, ushibRanaMk, ozhogiMk, ozhogPlamenem, ploskKostjOgr, ploskKostjNoogr, colotoRezMk};
+            ognestrelOdin, colotayaRana, ushibRanaMk, ozhogiMk, ozhogPlamenem, ploskKostjOgr, ploskKostjNoogr, colotoRezMk, ognestrelPya};
         localStorage.setItem('data', JSON.stringify(data));
 
         // Открытие нового окна/вкладки для редиректа на yoomoney.ru
@@ -67,7 +68,7 @@ function Popup() {
                 {/* <div className="popupClose" onClick={() => window.history.back()}>X</div> */} {/* Для отдельного окна */}
                 <div className="popupClose" onClick={close}>X</div>
                 <div className="popupTitle">
-                    <h1>Для дальнейшей загрузки сформированного документа, Вы можете добровольно пожертвовать (внести взнос в размере 300 рублей) на содержание и развитие данного проекта</h1>
+                    <h1 className='MsoBodyText'>Для дальнейшей загрузки сформированного документа, Вы можете добровольно пожертвовать (внести взнос в размере 300 рублей) на содержание и развитие данного проекта</h1>
                 </div>
                 <div className="payButton" onClick={redirectToYooMoney}>
                     <button>Перейти к оплате</button>
