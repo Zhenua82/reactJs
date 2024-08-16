@@ -13,7 +13,7 @@ function Vozrast(){
                 <h2 className={styles.title}>Возрастная периодизация:</h2>
                 <img className={styles.image} src={vozrast2} alt="Возраст2"/>
                 <img className={styles.image} src={vozrast} alt="Возраст"/>
-                <div>Источник:<a className={styles.link} href='https://ru.wikipedia.org/wiki/Возрастная_периодизация#cite_note-11' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://ru.wikipedia.org/wiki/Возрастная_периодизация#cite_note-11' target='_blank' rel="noopener noreferrer">
                 https://ru.wikipedia.org/wiki/Возрастная_периодизация#cite_note-11</a> </div>
 
                 <h2 className={styles.title}>Телосложение:</h2>
@@ -22,7 +22,7 @@ function Vozrast(){
 При правильном телосложении обе половины тела симметричны, размеры отдельных частей тела пропорциональны, отсутствуют деформации грудной клетки, конечностей, позвоночника и других областей.
 При неправильном телосложениии меется видимая на глаз асимметрия участков тела, их диспропорция. Неправильное телосложение возникает в результате врожденной или приобретенной деформации скелета.
 </p>
-                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/2766357/page:10/' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/2766357/page:10/' target='_blank' rel="noopener noreferrer">
                 https://studfile.net/preview/2766357/page:10/</a> </div>
 
                 <h2 className={styles.title}>Рост:</h2>
@@ -30,14 +30,14 @@ function Vozrast(){
                     более 200 см.</p>
                 <p id='MsoBodyTextIndent'>Нормальным принято считать рост в пределах от 155 до 194 см. Женщины имеют более низкий рост, чем мужчины. В норме рост мужчин колеблется в пределах 160— 180 см, женщин — 155—170 см. В положении 
                     лежа рост увеличивается на 1,5—5,5 см за счет сглаживания физиологических изгибов позвоночника.</p>
-                <div>Источник:<a className={styles.link} href='https://meduniver.com/Medical/pulmonologia/426.html' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://meduniver.com/Medical/pulmonologia/426.html' target='_blank' rel="noopener noreferrer">
                 https://meduniver.com/Medical/pulmonologia/426.html</a> </div>
 
                 <h2 className={styles.title}>Питание:</h2>
                 <p id='MsoBodyTextIndent'>До настоящего времени состояние питания характеризуется такими общими выражениями, как хорошее, удовлетворительное, пониженное и т.п. Причем отнесение того или иного человека к перечисленным 
                     категориям производиться на основе обычного осмотра, в лучшем случае с использованием некоторых соматометрических показателей, таких как масса и длина тела. Совершенно очевидно, что такая 
                     классификация и методика ее фактического оснащения нуждается в совершенствовании.</p> 
-                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/5245201/page:2/' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/5245201/page:2/' target='_blank' rel="noopener noreferrer">
                 https://studfile.net/preview/5245201/page:2/</a> </div>
 
                 <h2 className={styles.title}>Форма грудной клетки:</h2>
@@ -46,10 +46,10 @@ function Vozrast(){
                     конституциональных типа, грудная клетка при различных типах телосложения имеет разную фор-му (Нормостеническая (коническая), Гиперстеническая (имеет форму цилиндра), Астеническая (удлиненная, 
                     узкая, плоская)), свойственную своему конституциональному типу. Патологическая форма грудной клетки может воз¬никнуть в результате как врожденных аномалий костей, так и различных хронических 
                     заболеваний (эмфизема легких, рахит, туберкулез).</p> 
-                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/5134537/page:9/' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/5134537/page:9/' target='_blank' rel="noopener noreferrer">
                 https://studfile.net/preview/5134537/page:9/</a> </div>
                 <img className={styles.image} src={grudj} alt="Грудная клетка"/>
-                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/2081722/page:34/' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/2081722/page:34/' target='_blank' rel="noopener noreferrer">
                 https://studfile.net/preview/2081722/page:34/</a> </div>
 
                 <h2 className={styles.title}>Форма живота:</h2>
@@ -59,7 +59,7 @@ function Vozrast(){
                     Втянутый живот характерен для запущенных случаев опухолей пищевода и желудка, которые сопровождаются нарушением поступления пищи в нижележащие отделы, одновременно у больного, как правило, отмечается пищеводная или желудочная рвота. Втянутый, ладьевидный живот также наблюдается у больных при наличии острой или хронической диареи и при свинцовой колике.
                     Иногда при перитоните или паретической непроходимости кишечника, а также при выраженном метеоризме может также обнаруживаться шарообразное выпячивание живота. При тяжелых нарушениях всасывания в тонком кишечнике живот также часто увеличен в размере, равномерно вздут. Живот может быть увеличен в объеме и за счет чрезмерно развитого подкожного жирового слоя при ожирении (как правило равномерное увеличение).
                 </p> 
-                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/2766357/page:143/' target='_blank' rel="noreferrer">
+                <div>Источник:<a className={styles.link} href='https://studfile.net/preview/2766357/page:143/' target='_blank' rel="noopener noreferrer">
                 https://studfile.net/preview/2766357/page:143/</a> </div>    
             </div>
             <Footer/>

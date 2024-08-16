@@ -13,7 +13,10 @@ function Spravka(){
                     <NavLink to='/info/rukDok'> <h2 id="MsoBodyTextIndent" className="linkk">Руководящие документы</h2> </NavLink>
                     <NavLink to='/info/verbalPortrait'> <h2 id="MsoBodyTextIndent" className="linkk">Cловесный портрет</h2> </NavLink>
                     <NavLink to='/info/vozrast'> <h2 id="MsoBodyTextIndent" className="linkk">Возраст, телосложение, рост, статус питания</h2> </NavLink>
-                    <NavLink to='/info/davnostj'> <h2 id="MsoBodyTextIndent" className="linkk">Давность повреждений и смерти</h2> </NavLink>                
+                    <NavLink to='/info/davnostj'> <h2 id="MsoBodyTextIndent" className="linkk">Давность повреждений и смерти</h2> </NavLink>               
+                    <a href='https://www.forens-med.ru/book.php?id=458' target="_blank" rel="noopener noreferrer">
+                        <h2 id="MsoBodyTextIndent" className="linkk">Размеры и вес внутренних органов</h2>
+                    </a>               
                 </div>         
             </div>
             

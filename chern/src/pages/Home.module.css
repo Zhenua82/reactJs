@@ -31,14 +31,10 @@
     text-align: center;
     font-size: 40px;
 }
-
 .h2Home {
     color: #34495e;
     text-align: center;
 }
-
-
-
 .imgHome{
     display: block;
     margin: auto;
@@ -66,13 +62,11 @@ a:hover{
     color: white;
     border: none;
     border-radius: 5px;
-
   }
 .btnHome:hover{
     background-color: purple;
     transform: scale(1.2);
 }
-
 /* Для страницы help: */
 .instruct {
     display: flex;
@@ -83,13 +77,11 @@ a:hover{
     margin: 8px; /* Отступы между элементами */
     box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
 }
-
 .instruct img {
     max-width: 100%;
     height: auto;
     margin-top: 16px; /* Отступ между текстом и изображением */
 }
-
 .container {
     display: flex;
     justify-content: space-between; /* Размещаем контейнеры в два столбца */

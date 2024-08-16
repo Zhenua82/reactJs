@@ -17,10 +17,10 @@ function VerbalPortrait(){
             <div className={styles.container}>
                 <h1 className={styles.title}>Словесный портрет</h1>
                 <img className={styles.image} src={verbPort} alt="Словесный портрет"/>
-                <div>Источник: <a className={styles.link} href='https://darminaopel.ru/library/shema-opisanija-vneshnosti-cheloveka-po-metodu-slovesnogo-portreta.html' target='_blank' rel="noreferrer">
+                <div>Источник: <a className={styles.link} href='https://darminaopel.ru/library/shema-opisanija-vneshnosti-cheloveka-po-metodu-slovesnogo-portreta.html' target='_blank' rel="noopener noreferrer">
                 Схема описания внешности человека по методу словесного портрета</a> </div>
                 <img className={styles.image} src={verbPort2} alt="Словесный портрет 2"/>
-                <a className={styles.link} href='https://studfile.net/preview/3651153/page:2/' target='_blank' rel="noreferrer">Методика описания признаков внешности человека (метод словесного портрета)</a>
+                <a className={styles.link} href='https://studfile.net/preview/3651153/page:2/' target='_blank' rel="noopener noreferrer">Методика описания признаков внешности человека (метод словесного портрета)</a>
             </div>
             <Footer/>
         </>

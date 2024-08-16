@@ -15,16 +15,16 @@ import Spravka from "./pages/Spravka";
 import VerbalPortrait from "./pages/spravka/VerbalPortrait";
 import RukDok from "./pages/spravka/RukDok";
 
+import Vozrast from './pages/spravka/Vozrast';
+import Davnostj from './pages/spravka/Davnostj';
 import Experiment from "./pages/Experiment";
 import IbsVksF from "./pages/IbsVksF";
 import IbsVksM from "./pages/IbsVksM";
 import IbsVksExp from "./pages/IbsVksExp";
 import OtravlenieNeftM from "./pages/OtravlenieNeftM";
 import OtravlenieNeftF from "./pages/OtravlenieNeftF";
-import Vozrast from './pages/spravka/Vozrast';
-import Davnostj from './pages/spravka/Davnostj';
-
-
+import OtravlenieButirolactonM from './pages/OtravlenieButirolactonM';
+import OtravlenieButirolactonF from './pages/OtravlenieButirolactonF';
 
 
 const App = () => {
@@ -38,20 +38,26 @@ const App = () => {
     else if (dataForm.diagnoz ==='отравление нефтепродуктами' && dataForm.sex === 'женский'){
       history.push('/otravlenieNeftF')
     }
-    else if (dataForm.diagnoz ==='эксперимент' && dataForm.sex === 'женский'){
-      history.push('/experiment')
+    else if (dataForm.diagnoz ==='отравление бутиролактоном' && dataForm.sex === 'мужской'){
+      history.push('/otravlenieButirolactonM')
     }
-    else if (dataForm.diagnoz ==='эксперимент' && dataForm.sex === 'мужской'){
-      history.push('/experiment')
+    else if (dataForm.diagnoz ==='отравление бутиролактоном' && dataForm.sex === 'женский'){
+      history.push('/otravlenieButirolactonF')
+    } 
+    else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
+      history.push('/ibsVksF')
     }
     else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
       history.push('/ibsVksM')
     }
-    else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
-      history.push('/ibsVksF')
-    }
-    // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
+    // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
     //   history.push('/ibsVksExp')
+    // }
+    // else if (dataForm.diagnoz ==='эксперимент' && dataForm.sex === 'женский'){
+    //   history.push('/experiment')
+    // }
+    // else if (dataForm.diagnoz ==='эксперимент' && dataForm.sex === 'мужской'){
+    //   history.push('/experiment')
     // }
     else{history.push('/inJob')}
   }
@@ -250,6 +256,12 @@ const App = () => {
       <Route path='/otravlenieNeftF'>
         <OtravlenieNeftF peredacha={generateDocument}></OtravlenieNeftF>
       </Route>
+      <Route path='/otravlenieButirolactonM'>
+        <OtravlenieButirolactonM peredacha={generateDocument}></OtravlenieButirolactonM>
+      </Route>
+      <Route path='/otravlenieButirolactonF'>
+        <OtravlenieButirolactonF peredacha={generateDocument}></OtravlenieButirolactonF>
+      </Route>
       <Route path='/ibsVksM' exact>
         <IbsVksM peredacha={generateDocument}/>
       </Route>
@@ -261,6 +273,10 @@ const App = () => {
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>
+      </Route>
+
+      <Route path='/:any'>
+        <Redirect to='/home'/>
       </Route>
     </Switch>
     </>)

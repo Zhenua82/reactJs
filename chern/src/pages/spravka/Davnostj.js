@@ -10,20 +10,20 @@ function Davnostj(){
             <Header />
             <div className={styles.container}>
                 <h2 className={styles.title}>Определение давности смерти:</h2>
-                <a className={styles.link} href='https://www.forens-med.ru/book.php?id=1921#2' target='_blank' rel="noreferrer">
+                <a className={styles.link} href='https://www.forens-med.ru/book.php?id=1921#2' target='_blank' rel="noopener noreferrer">
                 https://www.forens-med.ru/book.php?id=1921#2</a>
-                <a className={styles.link} href='https://studfile.net/preview/1147453/page:7/' target='_blank' rel="noreferrer">
+                <a className={styles.link} href='https://studfile.net/preview/1147453/page:7/' target='_blank' rel="noopener noreferrer">
                 https://studfile.net/preview/1147453/page:7/</a>
 
 
                 <h2 className={styles.title}>Давность образования повреждений:</h2>
-                <a className={styles.link} href='https://www.forens-med.ru/cat_t.php?id=70' target='_blank' rel="noreferrer">
+                <a className={styles.link} href='https://www.forens-med.ru/cat_t.php?id=70' target='_blank' rel="noopener noreferrer">
                 https://www.forens-med.ru/cat_t.php?id=70</a> 
-                <a className={styles.link} href='https://sudmed46.ru/data/documents/Opredelenie-davnosti-povrezhdeniy.pdf' target='_blank' rel="noreferrer">
+                <a className={styles.link} href='https://sudmed46.ru/data/documents/Opredelenie-davnosti-povrezhdeniy.pdf' target='_blank' rel="noopener noreferrer">
                 https://sudmed46.ru/data/documents/Opredelenie-davnosti-povrezhdeniy.pdf</a>
 
                 <h2 className={styles.title}>Определение давности рубцов кожи:</h2>
-                <a className={styles.link} href='https://forensicmedicine.ru/wiki/Рубец' target='_blank' rel="noreferrer">
+                <a className={styles.link} href='https://forensicmedicine.ru/wiki/Рубец' target='_blank' rel="noopener noreferrer">
                 https://forensicmedicine.ru/wiki/Рубец</a> 
                 
                 {/* <h2 className={styles.title}>Форма живота:</h2>

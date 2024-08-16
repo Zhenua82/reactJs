@@ -1,16 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
 html {
   font-family: sans-serif;
 }
-
-body {
-  
+body { 
   margin: 0;
 }
-
 #root {
   width: 100%;
   margin: auto;
@@ -46,19 +42,15 @@ body {
 }
 .red{color: red;}
 .blue{color: blue;}
-
-
 /* Стили некликабельности + cтили кнопки с изображением word: */
 .content-wrapper {
   margin-left: 20%;
   padding: 20px;
   position: relative;
 }
-
 .content {
   pointer-events: none; 
 }
-
 .clickable-button {
   /* position: relative; */
   position: fixed;
@@ -82,18 +74,15 @@ body {
   width: 20vw; /* Устанавливаем ширину как 20% от ширины экрана */
   box-sizing: border-box; /* Убедитесь, что padding не влияет на ширину */
 }
-
 .clickable-button:hover {
   background-color: #0056b3;
   transform: scale(1.02);
 }
-
 .wordImg {
   margin-right: 10px;
   width: 44px;
   height: 44px;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -103,18 +92,15 @@ body {
   background: rgba(0, 0, 0, 0);
   z-index: 5;
 }
-
 /* Цвет ссылок: */
 .linkk{
   cursor: pointer;
   text-decoration: underline;
   transition: color 0.3s ease;
-
 }
 .linkk:hover {
   color: purple;
 }
-
 .popup{
   height: 100%;
   width: 100%;
@@ -143,7 +129,8 @@ body {
   padding: 15px 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  background-color: rgb(3, 92, 3);
+  /* background-color: rgb(3, 92, 3); */
+  background-color: rgb(25, 37, 199);
   color: white;
   border: none;
   border-radius: 5px;
@@ -162,7 +149,6 @@ body {
   right: 10px;
   font-size: 30px;
 }
-
 .finishPay{
   width: 80%;
   margin: auto;
@@ -175,9 +161,11 @@ body {
 .finishPay h2{
   color:#0056b3;
   text-align: center;
+  width: 50%;
 }
 
 .finishPay img{
+  width: 30%;
   border: 1px solid black;
 }
 .footer{
@@ -188,4 +176,17 @@ body {
   color: #34495e;
   font-size: 24px;
   font-style: italic;
+}
+.footerImg{
+  display: block;
+  width: 50px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 20px
+}
+.h1Home {
+  margin-top: 200px;
+  color: #34495e;
+  text-align: center;
+  font-size: 40px;
 }
