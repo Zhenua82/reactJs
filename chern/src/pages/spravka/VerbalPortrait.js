@@ -4,9 +4,18 @@ import Header from '../../components/Header';
 import styles from './VerbalPortrait.module.css';
 import Footer from '../../components/Footer';
 
+import { Helmet } from 'react-helmet';
+
 function VerbalPortrait(){
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - словесный портрет</title>
+            <meta
+            name="description"
+            content="Страница со словесным портретом в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
         {/* <Header />
             <h1>Словесный портрет</h1>
             <img src={verbPort} alt="Словесный портрет"/><br></br>

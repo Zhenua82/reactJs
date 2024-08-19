@@ -7,10 +7,19 @@ import imgSlide33 from '../assets/slide33.JPG'
 import Footer from "../components/Footer";
 import { NavLink } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet';
+
 function Home() {
 
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - главная, экспертиза трупа</title>
+            <meta
+            name="description"
+            content="Главная страница конструктора заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
             <Header></Header>
             {/* <h1>Конструктор заключений по судебно-медицинской экспертизе (исследованию) трупа</h1>
             <div className={styles.pergamentWrap}>
@@ -26,14 +35,14 @@ function Home() {
                 </div>         
             </div> */}
             <h1 className={styles.h1Home}>Конструктор заключений по судебно-медицинской экспертизе (исследованию) трупа</h1>
-            <img src={imgSlide11} alt="Word" className={styles.imgHome}/>
+            <img src={imgSlide11} alt="Экспертиза трупа" className={styles.imgHome}/>
             <NavLink className={styles.link} to='/search'><button className={styles.btnHome}>Начать работу</button></NavLink>
-            <img src={imgSlide2} alt="Word" className={styles.imgHome}/>
+            <img src={imgSlide2} alt="Исследование трупа" className={styles.imgHome}/>
             {/* <h2> zzhmenka@yandex.ru</h2> */}
             <h2 className={styles.h2Home}>
-                <a href="mailto:zzhmenka@yandex.ru">construktor-mail@yandex.ru</a>
+                <a href="mailto:construktor-mail@yandex.ru">construktor-mail@yandex.ru</a>
             </h2>
-            <img src={imgSlide33} alt="Word" className={styles.imgHome}/>
+            <img src={imgSlide33} alt="Конструктор смэ" className={styles.imgHome}/>
             <Footer></Footer>           
         </>
     );

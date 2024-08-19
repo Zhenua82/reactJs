@@ -3,9 +3,18 @@ import Header from '../../components/Header';
 import styles from './RukDok.module.css';
 import Footer from '../../components/Footer';
 
+import { Helmet } from 'react-helmet';
+
 function RukDok(){
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - Руководящие документы</title>
+            <meta
+            name="description"
+            content="Страница руководящих документов в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
             <Header />
             <div className={styles.container}>
                 {/* <img className={styles.image} src={verbPort2} alt="Словесный портрет 2"/> */}

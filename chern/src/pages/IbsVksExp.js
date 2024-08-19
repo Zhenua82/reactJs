@@ -11,6 +11,8 @@ import Popup from '../components/Popup';
 import { expNeopStatee } from '../store/index';
 import { useHistory } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet';
+
 function IbsVksExp(props){
     const history = useHistory();
     const dispatchFunction = useDispatch();
@@ -44,6 +46,13 @@ function IbsVksExp(props){
 
     return (
         <>
+        <Helmet>
+        <title>Конструктор заключений по смэ - ИБС Эксперимент</title>
+        <meta
+          name="description"
+          content="Экспериментальная страница ишемической болезни сердца (ИБС) в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+        />
+        </Helmet>
         <SideMenu />
             <Header />
             <div className="content-wrapper">

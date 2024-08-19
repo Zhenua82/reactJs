@@ -13,6 +13,8 @@ import wordImg from '../assets/word2.svg';
 import HeaderExp from "../components/HeaderExp";
 import HeaderSpec from "../components/HeaderSpec";
 
+import { Helmet } from 'react-helmet';
+
 function Experiment(props) {
     const ushibRanaOgr = useSelector((state) => state.dopPovrezhden.ushibRanaOgr);
     const ushibRanaNoogr = useSelector((state) => state.dopPovrezhden.ushibRanaNoogr);
@@ -28,6 +30,13 @@ function Experiment(props) {
      
     return (
         <> 
+        <Helmet>
+            <title>Конструктор заключений по смэ - Эксперимент</title>
+            <meta
+            name="description"
+            content="Страница эксперимента в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
         <SideMenu />
         <Header />
         <div className="content-wrapper">

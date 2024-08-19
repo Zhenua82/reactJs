@@ -3,7 +3,16 @@ import Footer from "../components/Footer";
 import { NavLink } from 'react-router-dom';
 import styles from './Home.module.css';
 
+import { Helmet } from 'react-helmet';
+
 function Spravka(){
+    <Helmet>
+        <title>Конструктор заключений по смэ - Справка</title>
+        <meta
+          name="description"
+          content="Справочная страница в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+        />
+      </Helmet>
     return(
         <>
             <Header></Header>

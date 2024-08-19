@@ -18,6 +18,8 @@ import DopPovrezhdeniaLab from '../components/DopPovrezhdeniaLab';
 import DopPovrezhdeniaDiagnoz from '../components/DopPovrezhdeniaDiagnoz';
 import DopPovrezhdeniaVyvody from '../components/DopPovrezhdeniaVyvody';
 
+import { Helmet } from 'react-helmet';
+
 function OtravlenieNeftF(props){
     const history = useHistory();
     const dispatchFunction = useDispatch();
@@ -32,8 +34,8 @@ function OtravlenieNeftF(props){
     }, [money, dispatchFunction, props]);
 
     function generateDocument(){
-        // props.peredacha()
-        dispatchFunction(expNeopStatee.popup(true));
+        props.peredacha()
+        // dispatchFunction(expNeopStatee.popup(true));
         // history.push('/pay') //Отдельная страница   
     }
 
@@ -45,6 +47,13 @@ function OtravlenieNeftF(props){
 
     return (
         <>
+        <Helmet>
+            <title>Отравление нефтепродуктами (женщина), экспертиза трупа</title>
+            <meta
+            name="description"
+            content="Страница отравления нефтепродуктами для женщин в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
         <SideMenu />
         <Header />
             <div className="content-wrapper">

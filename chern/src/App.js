@@ -31,7 +31,7 @@ const App = () => {
   const history = useHistory();
 
   function onChangeData(dataForm){
-    console.log(dataForm)
+    // console.log(dataForm)
     if (dataForm.diagnoz ==='отравление нефтепродуктами' && dataForm.sex === 'мужской'){
       history.push('/otravlenieNeftM')
     }
@@ -236,7 +236,7 @@ const App = () => {
       <Route path='/info/verbalPortrait' exact>
         <VerbalPortrait/>
       </Route>
-      <Route path='/info/rukDok' exact>
+      <Route path='/info/rukDok' >
         <RukDok/>
       </Route>
       <Route path='/info/vozrast' exact>
@@ -247,7 +247,7 @@ const App = () => {
       </Route>
       
 
-      <Route path='/experiment' exact>
+      <Route path='/experiment' >
         <Experiment peredacha={generateDocument}/>
       </Route>
       <Route path='/otravlenieNeftM'>
@@ -262,13 +262,13 @@ const App = () => {
       <Route path='/otravlenieButirolactonF'>
         <OtravlenieButirolactonF peredacha={generateDocument}></OtravlenieButirolactonF>
       </Route>
-      <Route path='/ibsVksM' exact>
+      <Route path='/ibsVksM' >
         <IbsVksM peredacha={generateDocument}/>
       </Route>
-      <Route path='/ibsVksF' exact>
+      <Route path='/ibsVksF' >
         <IbsVksF peredacha={generateDocument}/>
       </Route>
-      <Route path='/ibsVksExp' exact>
+      <Route path='/ibsVksExp' >
         <IbsVksExp peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>

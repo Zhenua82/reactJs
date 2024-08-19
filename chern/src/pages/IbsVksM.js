@@ -17,6 +17,8 @@ import DopPovrezhdeniaLab from '../components/DopPovrezhdeniaLab';
 import DopPovrezhdeniaDiagnoz from '../components/DopPovrezhdeniaDiagnoz';
 import DopPovrezhdeniaVyvody from '../components/DopPovrezhdeniaVyvody';
 
+import { Helmet } from 'react-helmet';
+
 function IbsVksM(props){
     const history = useHistory();
     const dispatchFunction = useDispatch();
@@ -31,8 +33,8 @@ function IbsVksM(props){
     }, [money, dispatchFunction, props]);
 
     function generateDocument(){
-        // props.peredacha()
-        dispatchFunction(expNeopStatee.popup(true));
+        props.peredacha()
+        // dispatchFunction(expNeopStatee.popup(true));
         // history.push('/pay') //Отдельная страница   
     }
 
@@ -42,8 +44,15 @@ function IbsVksM(props){
     const sex = useSelector((state) => state.expNeopState.sex);
     const popup = useSelector((state) => state.expNeopState.popup);
 
-    return (
+    return ( 
         <>
+        <Helmet>
+        <title>ИБС внезапная коронарная смерть (мужчина) экспертиза трупа</title>
+        <meta
+          name="description"
+          content="Страница ишемической болезни сердца (ИБС) для мужчин в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+        />
+         </Helmet>
         <SideMenu />
             <Header />
             <div className="content-wrapper">

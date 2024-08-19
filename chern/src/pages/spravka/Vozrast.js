@@ -5,9 +5,18 @@ import vozrast from '../../assets/vozrast.png';
 import vozrast2 from '../../assets/vozrast2.png';
 import grudj from '../../assets/grudj.png';
 
+import { Helmet } from 'react-helmet';
+
 function Vozrast(){
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - возраст, телосложение, рост, питание </title>
+            <meta
+            name="description"
+            content="Страница о возрасте, телосложении, росте, питании в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
             <Header />
             <div className={styles.container}>
                 <h2 className={styles.title}>Возрастная периодизация:</h2>

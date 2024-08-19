@@ -1,9 +1,18 @@
 import imgFinishPay from '../assets/finishPay.png';
 import Header from '../components/Header';
 
+import { Helmet } from 'react-helmet';
+
 function PayFinish(){
     return(
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - Завершение оплаты</title>
+            <meta
+            name="description"
+            content="Страница завершения оплаты в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
         <Header/>
             <div className='finishPay'>
                 {/* Готовые кнопки оплаты: */}

@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import { useSelector, useDispatch } from 'react-redux';
 import { expNeopStatee } from '../store/index';
 
+import { Helmet } from 'react-helmet';
+
 const FormPoisk = (props) => {
     // const exp = useSelector((state) => state.expNeopState.exp);
     // const neop = useSelector((state) => state.expNeopState.neop);
@@ -72,6 +74,13 @@ const FormPoisk = (props) => {
 
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - Поиск</title>
+            <meta
+            name="description"
+            content="Страница поиска в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
         <Header></Header>
         <h1 className='h1Home'>Конструктор заключений</h1>
         <form>

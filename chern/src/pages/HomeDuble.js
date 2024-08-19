@@ -12,6 +12,8 @@ import imgSlide33 from '../assets/slide33.JPG'
 import Footer from "../components/Footer";
 import { NavLink } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet';
+
 function HomeDuble() {
     const dispatchFunction = useDispatch();
     const history = useHistory();
@@ -76,21 +78,28 @@ function HomeDuble() {
     }, []);
 
     const money = useSelector((state) => state.expNeopState.money);
-    console.log('Money status:', money);
+    // console.log('Money status:', money);
 
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ, экспертиза трупа</title>
+            <meta
+            name="description"
+            content="Страница конструктора заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
             <Header></Header>
             <h1 className={styles.h1Home}>Конструктор заключений по судебно-медицинской экспертизе (исследованию) трупа</h1>
             {money && <p>Оплата прошла успешно!</p>}
-            <img src={imgSlide11} alt="Word" className={styles.imgHome}/>
+            <img src={imgSlide11} alt="Исследование трупа" className={styles.imgHome}/>
             <NavLink className={styles.link} to='/search'><button className={styles.btnHome}>Начать работу</button></NavLink>
-            <img src={imgSlide2} alt="Word" className={styles.imgHome}/>
+            <img src={imgSlide2} alt="Конструктор по судебной медицине" className={styles.imgHome}/>
             {/* <h2> zzhmenka@yandex.ru</h2> */}
             <h2 className={styles.h2Home}>
-                <a href="mailto:zzhmenka@yandex.ru">zzhmenka@yandex.ru</a>
+                <a href="mailto:construktor-mail@yandex.ru">construktor-mail@yandex.ru</a>
             </h2>
-            <img src={imgSlide33} alt="Word" className={styles.imgHome}/>
+            <img src={imgSlide33} alt="Экспертиза трупа" className={styles.imgHome}/>
             <Footer></Footer> 
         </>
     );

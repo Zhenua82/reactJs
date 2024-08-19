@@ -3,10 +3,18 @@ import styles from './RukDok.module.css';
 import Footer from '../../components/Footer';
 // import vozrast from '../../assets/vozrast.png';
 
+import { Helmet } from 'react-helmet';
 
 function Davnostj(){
     return (
         <>
+        <Helmet>
+            <title>Давность повреждений, давность смерти, давность рубцов</title>
+            <meta
+            name="description"
+            content="Страница определения давности повреждений, рубцов и смерти в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
             <Header />
             <div className={styles.container}>
                 <h2 className={styles.title}>Определение давности смерти:</h2>

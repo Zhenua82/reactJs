@@ -3,6 +3,8 @@ import Header from '../components/Header';
 
 import { useSelector } from 'react-redux';
 
+import { Helmet } from 'react-helmet';
+
 
 
 function Pay(){
@@ -19,6 +21,13 @@ function Pay(){
 
     return (
         <>
+        <Helmet>
+            <title>Конструктор заключений по смэ - Оплата</title>
+            <meta
+            name="description"
+            content="Страница оплаты в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
+            />
+        </Helmet>
             <Header/>
             <Popup/>
         </>
