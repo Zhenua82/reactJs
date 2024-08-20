@@ -1,3 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /
+Disallow: /ibsVksExp
+Disallow: /experiment
+Disallow: /payFinish
+Disallow: /pay
+Disallow: /homeDuble
+
+Sitemap: https://constructor-sme.ru/sitemap.xml

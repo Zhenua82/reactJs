@@ -21,10 +21,14 @@ import Experiment from "./pages/Experiment";
 import IbsVksF from "./pages/IbsVksF";
 import IbsVksM from "./pages/IbsVksM";
 import IbsVksExp from "./pages/IbsVksExp";
+import IshimInsultM from './pages/IshimInsultM';
+import IshimInsultF from './pages/IshimInsultF';
 import OtravlenieNeftM from "./pages/OtravlenieNeftM";
 import OtravlenieNeftF from "./pages/OtravlenieNeftF";
 import OtravlenieButirolactonM from './pages/OtravlenieButirolactonM';
 import OtravlenieButirolactonF from './pages/OtravlenieButirolactonF';
+import OtravlenieEtilenglicoljM from './pages/OtravlenieEtilenglicoljM';
+import OtravlenieEtilenglicoljF from './pages/OtravlenieEtilenglicoljF';
 
 
 const App = () => {
@@ -44,11 +48,23 @@ const App = () => {
     else if (dataForm.diagnoz ==='отравление бутиролактоном' && dataForm.sex === 'женский'){
       history.push('/otravlenieButirolactonF')
     } 
+    else if (dataForm.diagnoz ==='отравление этиленгликолем' && dataForm.sex === 'мужской'){
+      history.push('/otravlenieEtilenglicoljM')
+    } 
+    else if (dataForm.diagnoz ==='отравление этиленгликолем' && dataForm.sex === 'женский'){
+      history.push('/otravlenieEtilenglicoljF')
+    } 
     else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
       history.push('/ibsVksF')
     }
     else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
       history.push('/ibsVksM')
+    }
+    else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'мужской'){
+      history.push('/ishimInsultM')
+    }
+    else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'женский'){
+      history.push('/ishimInsultF')
     }
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
     //   history.push('/ibsVksExp')
@@ -262,6 +278,12 @@ const App = () => {
       <Route path='/otravlenieButirolactonF'>
         <OtravlenieButirolactonF peredacha={generateDocument}></OtravlenieButirolactonF>
       </Route>
+      <Route path='/otravlenieEtilenglicoljM'>
+        <OtravlenieEtilenglicoljM peredacha={generateDocument}></OtravlenieEtilenglicoljM>
+      </Route>
+      <Route path='/otravlenieEtilenglicoljF'>
+        <OtravlenieEtilenglicoljF peredacha={generateDocument}></OtravlenieEtilenglicoljF>
+      </Route>
       <Route path='/ibsVksM' >
         <IbsVksM peredacha={generateDocument}/>
       </Route>
@@ -270,6 +292,12 @@ const App = () => {
       </Route>
       <Route path='/ibsVksExp' >
         <IbsVksExp peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ishimInsultM' >
+        <IshimInsultM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ishimInsultF' >
+        <IshimInsultF peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>

@@ -99,14 +99,14 @@ const FormPoisk = (props) => {
                     <select onChange={diagnozHandler} value={diagnoz} className={invalidFields.diagnoz ? styles.invalid : ''}>
                         <option value="">Выберите диагноз</option>
                         <option value="ИБС Внезапная коронарная смерть">ИБС Внезапная коронарная смерть</option>
+                        <option value="ишемический инсульт ГМ">Ишемический инсульт ГМ</option> 
                         <option value="отравление бутиролактоном">Oтравление бутиролактоном</option>
                         <option value="отравление нефтепродуктами">Отравление нефтепродуктами</option>                      
-                        <option value="отравление этиленгликолем" className='red'>Отравление этиленгликолем</option>                      
+                        <option value="отравление этиленгликолем">Отравление этиленгликолем</option>                      
                         <option value="авиационная травма" className='red'>Авиационная травма</option>                      
                         <option value="автомобильная травма (пешеход)" className='red'>Автомобильная травма (пешеход)</option>                     
                         <option value="автомобильная травма (водитель)" className='red'>Автомобильная травма (водитель)</option>                    
-                        <option value="автомобильная травма (пассажир)" className='red'>Автомобильная травма (пассажир)</option>                    
-                        <option value="ишемический инсульт ГМ" className='red'>Ишемический инсульт ГМ</option>                    
+                        <option value="автомобильная травма (пассажир)" className='red'>Автомобильная травма (пассажир)</option>                                                             
                         <option value="колото-резаное ранение груди" className='red'>Колото-резаное ранение груди</option>                   
                         <option value="множественные огнестрельные ранения груди" className='red'>Множественные огнестрельные ранения груди</option>                
                         <option value="одиночное огнестрельное ранение груди" className='red'>Одиночное огнестрельное ранение груди</option>                
