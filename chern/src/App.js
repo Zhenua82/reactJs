@@ -53,19 +53,21 @@ const App = () => {
     } 
     else if (dataForm.diagnoz ==='отравление этиленгликолем' && dataForm.sex === 'женский'){
       history.push('/otravlenieEtilenglicoljF')
-    } 
-    else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
-      history.push('/ibsVksF')
     }
-    else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
-      history.push('/ibsVksM')
-    }
-    else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'мужской'){
-      history.push('/ishimInsultM')
-    }
-    else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'женский'){
-      history.push('/ishimInsultF')
-    }
+    
+    // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
+    //   history.push('/ibsVksF')
+    // }
+    // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
+    //   history.push('/ibsVksM')
+    // }
+    // else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'мужской'){
+    //   history.push('/ishimInsultM')
+    // }
+    // else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'женский'){
+    //   history.push('/ishimInsultF')
+    // }
+
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
     //   history.push('/ibsVksExp')
     // }
