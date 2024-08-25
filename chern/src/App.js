@@ -29,6 +29,8 @@ import OtravlenieButirolactonM from './pages/OtravlenieButirolactonM';
 import OtravlenieButirolactonF from './pages/OtravlenieButirolactonF';
 import OtravlenieEtilenglicoljM from './pages/OtravlenieEtilenglicoljM';
 import OtravlenieEtilenglicoljF from './pages/OtravlenieEtilenglicoljF';
+import PoveshеnieM from './pages/PoveshеnieM';
+import PoveshеnieF from './pages/PoveshеnieF';
 
 
 const App = () => {
@@ -53,19 +55,24 @@ const App = () => {
     } 
     else if (dataForm.diagnoz ==='отравление этиленгликолем' && dataForm.sex === 'женский'){
       history.push('/otravlenieEtilenglicoljF')
+    }   
+    else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
+      history.push('/ibsVksF')
     }
-    
-    // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'женский'){
-    //   history.push('/ibsVksF')
+    else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
+      history.push('/ibsVksM')
+    }
+    else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'мужской'){
+      history.push('/ishimInsultM')
+    }
+    else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'женский'){
+      history.push('/ishimInsultF')
+    }
+    // else if (dataForm.diagnoz ==='повешение' && dataForm.sex === 'мужской'){
+    //   history.push('/poveshеnieM')
     // }
-    // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
-    //   history.push('/ibsVksM')
-    // }
-    // else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'мужской'){
-    //   history.push('/ishimInsultM')
-    // }
-    // else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'женский'){
-    //   history.push('/ishimInsultF')
+    // else if (dataForm.diagnoz ==='повешение' && dataForm.sex === 'женский'){
+    //   history.push('/poveshеnieF')
     // }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
@@ -112,8 +119,8 @@ const App = () => {
                     el.childNodes.forEach(child => {
                         textRuns = textRuns.concat(processNode(child, currentClass, currentStyles));
                     });
-
-                    const alignment = el.id === 'MsoBodyTextIndent' ? AlignmentType.JUSTIFIED :
+                    //Добавка выравнивания по классу 'MsoNormal':
+                    const alignment = el.id === 'MsoBodyTextIndent' || el.classList.contains('MsoNormal') ? AlignmentType.JUSTIFIED :
                         el.classList.contains('MsoBodyText') ? AlignmentType.CENTER : AlignmentType.LEFT;
 
                     paragraphs.push(new Paragraph({
@@ -300,6 +307,12 @@ const App = () => {
       </Route>
       <Route path='/ishimInsultF' >
         <IshimInsultF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/poveshеnieM' >
+        <PoveshеnieM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/poveshеnieF' >
+        <PoveshеnieF peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>

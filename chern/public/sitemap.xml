@@ -81,7 +81,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://constructor-sme.ru/ishimInsultM</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -90,5 +90,15 @@
     <loc>https://constructor-sme.ru/ishimInsultF</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url> -->
+  <!-- <url>
+    <loc>https://constructor-sme.ru/poveshеnieM</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://constructor-sme.ru/poveshеnieF</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url> -->
 </urlset>

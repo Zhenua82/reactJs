@@ -102,8 +102,9 @@ const FormPoisk = (props) => {
                         <option value="отравление бутиролактоном">Oтравление бутиролактоном</option>
                         <option value="отравление нефтепродуктами">Отравление нефтепродуктами</option>                      
                         <option value="отравление этиленгликолем">Отравление этиленгликолем</option>  
-                        <option value="ИБС Внезапная коронарная смерть" className='red'>ИБС Внезапная коронарная смерть</option>
-                        <option value="ишемический инсульт ГМ" className='red'>Ишемический инсульт ГМ</option>                     
+                        <option value="ИБС Внезапная коронарная смерть">ИБС Внезапная коронарная смерть</option>
+                        <option value="ишемический инсульт ГМ" className='red'>Ишемический инсульт ГМ</option>
+                        <option value="повешение" className='red'>Повешение</option>                     
                         <option value="авиационная травма" className='red'>Авиационная травма</option>                      
                         <option value="автомобильная травма (пешеход)" className='red'>Автомобильная травма (пешеход)</option>                     
                         <option value="автомобильная травма (водитель)" className='red'>Автомобильная травма (водитель)</option>                    
@@ -113,7 +114,6 @@ const FormPoisk = (props) => {
                         <option value="одиночное огнестрельное ранение груди" className='red'>Одиночное огнестрельное ранение груди</option>                
                         <option value="одиночное огнестрельное ранение головы" className='red'>Одиночное огнестрельное ранение головы</option>                              
                         <option value="падение с высоты + переохлаждение" className='red'>Падение с высоты + переохлаждение</option>              
-                        <option value="повешение" className='red'>Повешение</option>              
                         <option value="поражение техническим электричеством" className='red'>Поражение техническим электричеством</option>
                         <option value="рак предстательной железы" className='red'>Рак предстательной железы</option>
                         <option value="термические ожоги + отравление СО" className='red'>Термические ожоги + отравление СО</option>

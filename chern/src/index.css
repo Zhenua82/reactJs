@@ -37,6 +37,11 @@ body {
   text-align:justify;
   text-indent: 2em; 
 }
+.MsoNormal{
+  display: inline-block !important;
+  text-align:justify;
+  text-indent: 2em; 
+}
 .BodyText2{
   margin: auto;
 }

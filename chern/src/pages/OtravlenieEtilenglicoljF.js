@@ -34,8 +34,8 @@ function OtravlenieEtilenglicoljF(props) {
     }, [money, dispatchFunction, props]);
 
     function generateDocument(){
-        props.peredacha();
-        // dispatchFunction(expNeopStatee.popup(true));
+        // props.peredacha();
+        dispatchFunction(expNeopStatee.popup(true));
         // history.push('/pay') //Отдельная страница   
     }
     
