@@ -103,8 +103,8 @@ const FormPoisk = (props) => {
                         <option value="отравление нефтепродуктами">Отравление нефтепродуктами</option>                      
                         <option value="отравление этиленгликолем">Отравление этиленгликолем</option>  
                         <option value="ИБС Внезапная коронарная смерть">ИБС Внезапная коронарная смерть</option>
-                        <option value="ишемический инсульт ГМ" className='red'>Ишемический инсульт ГМ</option>
-                        <option value="повешение" className='red'>Повешение</option>                     
+                        <option value="ишемический инсульт ГМ">Ишемический инсульт ГМ</option>
+                        <option value="повешение">Повешение</option>                     
                         <option value="авиационная травма" className='red'>Авиационная травма</option>                      
                         <option value="автомобильная травма (пешеход)" className='red'>Автомобильная травма (пешеход)</option>                     
                         <option value="автомобильная травма (водитель)" className='red'>Автомобильная травма (водитель)</option>                    

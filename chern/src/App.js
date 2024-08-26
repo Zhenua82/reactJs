@@ -31,6 +31,7 @@ import OtravlenieEtilenglicoljM from './pages/OtravlenieEtilenglicoljM';
 import OtravlenieEtilenglicoljF from './pages/OtravlenieEtilenglicoljF';
 import PoveshеnieM from './pages/PoveshеnieM';
 import PoveshеnieF from './pages/PoveshеnieF';
+import ChmtM from './pages/ChmtM';
 
 
 const App = () => {
@@ -68,11 +69,17 @@ const App = () => {
     else if (dataForm.diagnoz ==='ишемический инсульт ГМ' && dataForm.sex === 'женский'){
       history.push('/ishimInsultF')
     }
-    // else if (dataForm.diagnoz ==='повешение' && dataForm.sex === 'мужской'){
-    //   history.push('/poveshеnieM')
-    // }
-    // else if (dataForm.diagnoz ==='повешение' && dataForm.sex === 'женский'){
-    //   history.push('/poveshеnieF')
+    else if (dataForm.diagnoz ==='повешение' && dataForm.sex === 'мужской'){
+      history.push('/poveshеnieM')
+    }
+    else if (dataForm.diagnoz ==='повешение' && dataForm.sex === 'женский'){
+      history.push('/poveshеnieF')
+    }
+    else if (dataForm.diagnoz ==='ЧМТ' && dataForm.sex === 'мужской'){
+      history.push('/chmtM')
+    }
+    // else if (dataForm.diagnoz ==='ЧМТ' && dataForm.sex === 'женский'){
+    //   history.push('/chmtF')
     // }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
@@ -314,6 +321,12 @@ const App = () => {
       <Route path='/poveshеnieF' >
         <PoveshеnieF peredacha={generateDocument}/>
       </Route>
+      <Route path='/chmtM' >
+        <ChmtM peredacha={generateDocument}/>
+      </Route>
+      {/* <Route path='/chmtF' >
+        <ChmtF peredacha={generateDocument}/>
+      </Route> */}
       <Route path='/inJob'>
         <InJob></InJob>
       </Route>
