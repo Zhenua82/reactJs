@@ -32,6 +32,9 @@ import OtravlenieEtilenglicoljF from './pages/OtravlenieEtilenglicoljF';
 import PoveshеnieM from './pages/PoveshеnieM';
 import PoveshеnieF from './pages/PoveshеnieF';
 import ChmtM from './pages/ChmtM';
+import ChmtF from './pages/ChmtF';
+import ElectroM from './pages/ElectroM';
+import ElectroF from './pages/ElectroF';
 
 
 const App = () => {
@@ -78,9 +81,15 @@ const App = () => {
     else if (dataForm.diagnoz ==='ЧМТ' && dataForm.sex === 'мужской'){
       history.push('/chmtM')
     }
-    // else if (dataForm.diagnoz ==='ЧМТ' && dataForm.sex === 'женский'){
-    //   history.push('/chmtF')
-    // }
+    else if (dataForm.diagnoz ==='ЧМТ' && dataForm.sex === 'женский'){
+      history.push('/chmtF')
+    }
+    else if (dataForm.diagnoz ==='поражение техническим электричеством' && dataForm.sex === 'мужской'){
+      history.push('/electroM')
+    }
+    else if (dataForm.diagnoz ==='поражение техническим электричеством' && dataForm.sex === 'женский'){
+      history.push('/electroF')
+    }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
     //   history.push('/ibsVksExp')
@@ -324,9 +333,15 @@ const App = () => {
       <Route path='/chmtM' >
         <ChmtM peredacha={generateDocument}/>
       </Route>
-      {/* <Route path='/chmtF' >
+      <Route path='/chmtF' >
         <ChmtF peredacha={generateDocument}/>
-      </Route> */}
+      </Route>
+      <Route path='/electroM' >
+        <ElectroM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/electroF' >
+        <ElectroF peredacha={generateDocument}/>
+      </Route>
       <Route path='/inJob'>
         <InJob></InJob>
       </Route>

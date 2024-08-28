@@ -104,7 +104,9 @@ const FormPoisk = (props) => {
                         <option value="отравление этиленгликолем">Отравление этиленгликолем</option>  
                         <option value="ИБС Внезапная коронарная смерть">ИБС Внезапная коронарная смерть</option>
                         <option value="ишемический инсульт ГМ">Ишемический инсульт ГМ</option>
-                        <option value="повешение">Повешение</option>                     
+                        <option value="ЧМТ">ЧМТ</option>
+                        <option value="повешение">Повешение</option>
+                        <option value="поражение техническим электричеством">Поражение техническим электричеством</option>                     
                         <option value="авиационная травма" className='red'>Авиационная травма</option>                      
                         <option value="автомобильная травма (пешеход)" className='red'>Автомобильная травма (пешеход)</option>                     
                         <option value="автомобильная травма (водитель)" className='red'>Автомобильная травма (водитель)</option>                    
@@ -113,14 +115,13 @@ const FormPoisk = (props) => {
                         <option value="множественные огнестрельные ранения груди" className='red'>Множественные огнестрельные ранения груди</option>                
                         <option value="одиночное огнестрельное ранение груди" className='red'>Одиночное огнестрельное ранение груди</option>                
                         <option value="одиночное огнестрельное ранение головы" className='red'>Одиночное огнестрельное ранение головы</option>                              
-                        <option value="падение с высоты + переохлаждение" className='red'>Падение с высоты + переохлаждение</option>              
-                        <option value="поражение техническим электричеством" className='red'>Поражение техническим электричеством</option>
+                        <option value="падение с высоты + переохлаждение" className='red'>Падение с высоты + переохлаждение</option>                                     
                         <option value="рак предстательной железы" className='red'>Рак предстательной железы</option>
                         <option value="термические ожоги + отравление СО" className='red'>Термические ожоги + отравление СО</option>
                         <option value="тромбофлебит глубоких вен н/к, ТЭЛА" className='red'>Tромбофлебит глубоких вен н/к, ТЭЛА</option>
                         <option value="тупая травма живота" className='red'>Тупая травма живота</option>
                         <option value="утопление в воде" className='red'>Утопление в воде</option>
-                        <option value="ЧМТ" className='red'>ЧМТ</option>
+                        
 
                         {/* <option value="эксперимент">Эксперимент</option> */}
                     </select>

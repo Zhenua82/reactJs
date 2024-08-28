@@ -92,12 +92,32 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://constructor-sme.ru/chmtM</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://constructor-sme.ru/chmtF</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://constructor-sme.ru/poveshеnieM</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://constructor-sme.ru/poveshеnieF</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://constructor-sme.ru/electroM</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://constructor-sme.ru/electroF</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
