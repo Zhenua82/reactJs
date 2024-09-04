@@ -35,6 +35,12 @@ import ChmtM from './pages/ChmtM';
 import ChmtF from './pages/ChmtF';
 import ElectroM from './pages/ElectroM';
 import ElectroF from './pages/ElectroF';
+import OgnestrelTorax1M from './pages/OgnestrelTorax1M';
+import OgnestrelTorax1F from './pages/OgnestrelTorax1F';
+import OgnestrelToraxManyM from './pages/OgnestrelToraxManyM';
+import OgnestrelToraxManyF from './pages/OgnestrelToraxManyF';
+import OgnestrelHeadM from './pages/OgnestrelHeadM';
+import OgnestrelHeadF from './pages/OgnestrelHeadF';
 
 
 const App = () => {
@@ -89,6 +95,24 @@ const App = () => {
     }
     else if (dataForm.diagnoz ==='поражение техническим электричеством' && dataForm.sex === 'женский'){
       history.push('/electroF')
+    }
+    else if (dataForm.diagnoz ==='одиночное огнестрельное ранение груди' && dataForm.sex === 'мужской'){
+      history.push('/ognestrelTorax1M')
+    }
+    else if (dataForm.diagnoz ==='одиночное огнестрельное ранение груди' && dataForm.sex === 'женский'){
+      history.push('/ognestrelTorax1F')
+    }
+    else if (dataForm.diagnoz ==='множественные огнестрельные ранения груди' && dataForm.sex === 'мужской'){
+      history.push('/ognestrelToraxManyM')
+    }
+    else if (dataForm.diagnoz ==='множественные огнестрельные ранения груди' && dataForm.sex === 'женский'){
+      history.push('/ognestrelToraxManyF')
+    }
+    else if (dataForm.diagnoz ==='одиночное огнестрельное ранение головы' && dataForm.sex === 'мужской'){
+      history.push('/ognestrelHeadM')
+    }
+    else if (dataForm.diagnoz ==='одиночное огнестрельное ранение головы' && dataForm.sex === 'женский'){
+      history.push('/ognestrelHeadF')
     }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
@@ -341,6 +365,24 @@ const App = () => {
       </Route>
       <Route path='/electroF' >
         <ElectroF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ognestrelTorax1M' >
+        <OgnestrelTorax1M peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ognestrelTorax1F' >
+        <OgnestrelTorax1F peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ognestrelToraxManyM' >
+        <OgnestrelToraxManyM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ognestrelToraxManyF' >
+        <OgnestrelToraxManyF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ognestrelHeadM' >
+        <OgnestrelHeadM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ognestrelHeadF' >
+        <OgnestrelHeadF peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>
