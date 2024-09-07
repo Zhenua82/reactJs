@@ -12,6 +12,7 @@ function PayFinish(){
             name="description"
             content="Страница завершения оплаты в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
             />
+            <meta name="robots" content="noindex" />
         </Helmet>
         <Header/>
             <div className='finishPay'>

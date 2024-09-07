@@ -27,6 +27,7 @@ function Pay(){
             name="description"
             content="Страница оплаты в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
             />
+            <meta name="robots" content="noindex" />
         </Helmet>
             <Header/>
             <Popup/>

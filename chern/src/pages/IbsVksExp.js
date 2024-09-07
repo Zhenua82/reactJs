@@ -52,6 +52,7 @@ function IbsVksExp(props){
           name="description"
           content="Экспериментальная страница ишемической болезни сердца (ИБС) в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
         />
+        <meta name="robots" content="noindex" />
         </Helmet>
         <SideMenu />
             <Header />

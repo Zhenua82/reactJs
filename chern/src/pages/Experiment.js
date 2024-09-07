@@ -36,6 +36,7 @@ function Experiment(props) {
             name="description"
             content="Страница эксперимента в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
             />
+            <meta name="robots" content="noindex" />
         </Helmet>
         <SideMenu />
         <Header />

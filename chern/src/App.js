@@ -41,6 +41,12 @@ import OgnestrelToraxManyM from './pages/OgnestrelToraxManyM';
 import OgnestrelToraxManyF from './pages/OgnestrelToraxManyF';
 import OgnestrelHeadM from './pages/OgnestrelHeadM';
 import OgnestrelHeadF from './pages/OgnestrelHeadF';
+import TromboflebitM from './pages/TromboflebitM';
+import TromboflebitF from './pages/TromboflebitF';
+import AutoPeshM from './pages/AutoPeshM';
+import AutoPeshF from './pages/AutoPeshF';
+import AutoVoditM from './pages/AutoVoditM';
+import AutoVoditF from './pages/AutoVoditF';
 
 
 const App = () => {
@@ -113,6 +119,24 @@ const App = () => {
     }
     else if (dataForm.diagnoz ==='одиночное огнестрельное ранение головы' && dataForm.sex === 'женский'){
       history.push('/ognestrelHeadF')
+    }
+    else if (dataForm.diagnoz ==='тромбофлебит глубоких вен н/к, ТЭЛА' && dataForm.sex === 'мужской'){
+      history.push('/tromboflebitM')
+    }
+    else if (dataForm.diagnoz ==='тромбофлебит глубоких вен н/к, ТЭЛА' && dataForm.sex === 'женский'){
+      history.push('/tromboflebitF')
+    }
+    else if (dataForm.diagnoz ==='автомобильная травма (пешеход)' && dataForm.sex === 'мужской'){
+      history.push('/autoPeshM')
+    }
+    else if (dataForm.diagnoz ==='автомобильная травма (пешеход)' && dataForm.sex === 'женский'){
+      history.push('/autoPeshF')
+    }
+    else if (dataForm.diagnoz ==='автомобильная травма (водитель)' && dataForm.sex === 'мужской'){
+      history.push('/autoVoditM')
+    }
+    else if (dataForm.diagnoz ==='автомобильная травма (водитель)' && dataForm.sex === 'женский'){
+      history.push('/autoVoditF')
     }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
@@ -383,6 +407,24 @@ const App = () => {
       </Route>
       <Route path='/ognestrelHeadF' >
         <OgnestrelHeadF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/tromboflebitM' >
+        <TromboflebitM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/tromboflebitF' >
+        <TromboflebitF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/autoPeshM' >
+        <AutoPeshM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/autoPeshF' >
+        <AutoPeshF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/autoVoditM' >
+        <AutoVoditM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/autoVoditF' >
+        <AutoVoditF peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>

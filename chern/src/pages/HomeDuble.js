@@ -88,6 +88,7 @@ function HomeDuble() {
             name="description"
             content="Страница конструктора заключений по судебно-медицинской экспертизе (смэ)."
             />
+            <meta name="robots" content="noindex" />
         </Helmet>
             <Header></Header>
             <h1 className={styles.h1Home}>Конструктор заключений по судебно-медицинской экспертизе (исследованию) трупа</h1>
