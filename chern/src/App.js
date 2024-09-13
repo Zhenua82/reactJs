@@ -47,6 +47,12 @@ import AutoPeshM from './pages/AutoPeshM';
 import AutoPeshF from './pages/AutoPeshF';
 import AutoVoditM from './pages/AutoVoditM';
 import AutoVoditF from './pages/AutoVoditF';
+import AutoPasF from './pages/AutoPasF';
+import AutoPasM from './pages/AutoPasM';
+import ColotoRezM from './pages/ColotoRezM';
+import ColotoRezF from './pages/ColotoRezF';
+import UtoplenieM from './pages/UtoplenieM';
+import UtoplenieF from './pages/UtoplenieF';
 
 
 const App = () => {
@@ -137,6 +143,24 @@ const App = () => {
     }
     else if (dataForm.diagnoz ==='автомобильная травма (водитель)' && dataForm.sex === 'женский'){
       history.push('/autoVoditF')
+    }
+    else if (dataForm.diagnoz ==='автомобильная травма (пассажир)' && dataForm.sex === 'мужской'){
+      history.push('/autoPasM')
+    }
+    else if (dataForm.diagnoz ==='автомобильная травма (пассажир)' && dataForm.sex === 'женский'){
+      history.push('/autoPasF')
+    }
+    else if (dataForm.diagnoz ==='колото-резаное ранение груди' && dataForm.sex === 'мужской'){
+      history.push('/colotoRezM')
+    }
+    else if (dataForm.diagnoz ==='колото-резаное ранение груди' && dataForm.sex === 'женский'){
+      history.push('/colotoRezF')
+    }
+    else if (dataForm.diagnoz ==='утопление в воде' && dataForm.sex === 'мужской'){
+      history.push('/utoplenieM')
+    }
+    else if (dataForm.diagnoz ==='утопление в воде' && dataForm.sex === 'женский'){
+      history.push('/utoplenieF')
     }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
@@ -425,6 +449,24 @@ const App = () => {
       </Route>
       <Route path='/autoVoditF' >
         <AutoVoditF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/autoPasM' >
+        <AutoPasM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/autoPasF' >
+        <AutoPasF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/colotoRezM' >
+        <ColotoRezM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/colotoRezF' >
+        <ColotoRezF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/utoplenieM' >
+        <UtoplenieM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/utoplenieF' >
+        <UtoplenieF peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>

@@ -113,14 +113,15 @@ const FormPoisk = (props) => {
                         <option value="одиночное огнестрельное ранение головы">Одиночное огнестрельное ранение головы</option>                                                                
                         <option value="автомобильная травма (пешеход)">Автомобильная травма (пешеход)</option>                     
                         <option value="автомобильная травма (водитель)">Автомобильная травма (водитель)</option>                    
-                        <option value="автомобильная травма (пассажир)" className='red'>Автомобильная травма (пассажир)</option>
-                        <option value="авиационная травма" className='red'>Авиационная травма</option>                                                              
-                        <option value="колото-резаное ранение груди" className='red'>Колото-резаное ранение груди</option>
+                        <option value="автомобильная травма (пассажир)">Автомобильная травма (пассажир)</option>
+                        <option value="колото-резаное ранение груди">Колото-резаное ранение груди</option>
+                        <option value="утопление в воде">Утопление в воде</option>
+                        <option value="авиационная травма" className='red'>Авиационная травма</option>                                                                                  
                         <option value="падение с высоты + переохлаждение" className='red'>Падение с высоты + переохлаждение</option>                                     
                         <option value="рак предстательной железы" className='red'>Рак предстательной железы</option>
                         <option value="термические ожоги + отравление СО" className='red'>Термические ожоги + отравление СО</option>
                         <option value="тупая травма живота" className='red'>Тупая травма живота</option>
-                        <option value="утопление в воде" className='red'>Утопление в воде</option>
+                        
                         
                         {/* <option value="эксперимент">Эксперимент</option> */}
                     </select>

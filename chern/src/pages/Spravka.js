@@ -5,16 +5,16 @@ import styles from './Home.module.css';
 
 import { Helmet } from 'react-helmet';
 
-function Spravka(){
-    <Helmet>
+function Spravka(){  
+    return(
+        <>
+        <Helmet>
         <title>Конструктор заключений по смэ - Справка</title>
         <meta
           name="description"
           content="Справочная страница в конструкторе заключений по судебно-медицинской экспертизе (смэ)."
         />
-      </Helmet>
-    return(
-        <>
+        </Helmet>
             <Header></Header>
             <h1 className={styles.h1Home}>Справочная информация:</h1>
             <div className={styles.pergamentWrap}>
