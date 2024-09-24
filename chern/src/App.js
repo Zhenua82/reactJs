@@ -53,7 +53,16 @@ import ColotoRezM from './pages/ColotoRezM';
 import ColotoRezF from './pages/ColotoRezF';
 import UtoplenieM from './pages/UtoplenieM';
 import UtoplenieF from './pages/UtoplenieF';
-
+import TupajaZhivotaM from './pages/TupajaZhivotaM';
+import TupajaZhivotaF from './pages/TupajaZhivotaF';
+import OzhogyM from './pages/OzhogyM';
+import OzhogyF from './pages/OzhogyF';
+import KatatravmaM from './pages/KatatravmaM';
+import KatatravmaF from './pages/KatatravmaF';
+import AviatravmaM from './pages/AviatravmaM';
+import AviatravmaF from './pages/AviatravmaF';
+import RakProstatyM from './pages/RakProstatyM';
+import RakProstatyF from './pages/RakProstatyF';
 
 const App = () => {
   const history = useHistory();
@@ -161,6 +170,36 @@ const App = () => {
     }
     else if (dataForm.diagnoz ==='утопление в воде' && dataForm.sex === 'женский'){
       history.push('/utoplenieF')
+    }
+    else if (dataForm.diagnoz ==='тупая травма живота' && dataForm.sex === 'мужской'){
+      history.push('/tupajaZhivotaM')
+    }
+    else if (dataForm.diagnoz ==='тупая травма живота' && dataForm.sex === 'женский'){
+      history.push('/tupajaZhivotaF')
+    }
+    else if (dataForm.diagnoz ==='термические ожоги + отравление СО' && dataForm.sex === 'мужской'){
+      history.push('/ozhogyM')
+    }
+    else if (dataForm.diagnoz ==='термические ожоги + отравление СО' && dataForm.sex === 'женский'){
+      history.push('/ozhogyF')
+    }
+    else if (dataForm.diagnoz ==='падение с высоты + переохлаждение' && dataForm.sex === 'мужской'){
+      history.push('/katatravmaM')
+    }
+    else if (dataForm.diagnoz ==='падение с высоты + переохлаждение' && dataForm.sex === 'женский'){
+      history.push('/katatravmaF')
+    }
+    else if (dataForm.diagnoz ==='авиационная травма' && dataForm.sex === 'мужской'){
+      history.push('/aviatravmaM')
+    }
+    else if (dataForm.diagnoz ==='авиационная травма' && dataForm.sex === 'женский'){
+      history.push('/aviatravmaF')
+    }
+    else if (dataForm.diagnoz ==='рак предстательной железы' && dataForm.sex === 'мужской'){
+      history.push('/rakProstatyM')
+    }
+    else if (dataForm.diagnoz ==='рак предстательной железы' && dataForm.sex === 'женский'){
+      history.push('/rakProstatyF')
     }
 
     // else if (dataForm.diagnoz ==='ИБС Внезапная коронарная смерть' && dataForm.sex === 'мужской'){
@@ -467,6 +506,36 @@ const App = () => {
       </Route>
       <Route path='/utoplenieF' >
         <UtoplenieF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/tupajaZhivotaM' >
+        <TupajaZhivotaM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/tupajaZhivotaF' >
+        <TupajaZhivotaF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ozhogyM' >
+        <OzhogyM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/ozhogyF' >
+        <OzhogyF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/katatravmaM' >
+        <KatatravmaM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/katatravmaF' >
+        <KatatravmaF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/aviatravmaM' >
+        <AviatravmaM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/aviatravmaF' >
+        <AviatravmaF peredacha={generateDocument}/>
+      </Route>
+      <Route path='/rakProstatyM' >
+        <RakProstatyM peredacha={generateDocument}/>
+      </Route>
+      <Route path='/rakProstatyF' >
+        <RakProstatyF peredacha={generateDocument}/>
       </Route>
       <Route path='/inJob'>
         <InJob></InJob>

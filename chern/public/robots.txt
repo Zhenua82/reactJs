@@ -21,8 +21,8 @@ Allow: /ishimInsultM
 Allow: /ishimInsultF
 Allow: /chmtM
 Allow: /chmtF
-Allow: /poveshеnieM
-Allow: /poveshеnieF
+Allow: /poveshenieM
+Allow: /poveshenieF
 Allow: /electroM
 Allow: /electroF
 Allow: /ognestrelTorax1M
