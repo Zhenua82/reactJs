@@ -18,7 +18,9 @@ root.render(
 
   <>
     <Provider store={store}>
-      <Router> <App /> </Router>
+      <Router> 
+        <App /> 
+      </Router>
     </Provider>   
   </>
 );

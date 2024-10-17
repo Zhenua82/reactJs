@@ -1,8 +1,6 @@
 import wordImg from '../assets/word2.svg';
 
 import Header from "../components/Header";
-import HeaderExp from "../components/HeaderExp";
-import HeaderSpec from "../components/HeaderSpec";
 import SideMenu from "../components/SideMenu";
 
 import React, { useRef, useEffect } from "react";
@@ -10,12 +8,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import Popup from '../components/Popup';
 import { expNeopStatee } from '../store/index';
 import { useHistory } from 'react-router-dom';
-//Импорт компонентов доп повреждений:
-import DopPovrezhdeniaOpis from '../components/DopPovrezhdeniaOpis';
-import DopPovrezhdeniaVnutr from '../components/DopPovrezhdeniaVnutr';
-import DopPovrezhdeniaLab from '../components/DopPovrezhdeniaLab';
-import DopPovrezhdeniaDiagnoz from '../components/DopPovrezhdeniaDiagnoz';
-import DopPovrezhdeniaVyvody from '../components/DopPovrezhdeniaVyvody';
 
 import { Helmet } from 'react-helmet';
 
@@ -39,9 +31,6 @@ function RakProstatyF(props){
     }
 
     //Получаем из хранилища состояние вида экспертизы личности трупа и пола:
-    const exp = useSelector((state) => state.expNeopState.exp);
-    const neop = useSelector((state) => state.expNeopState.neop);
-    const sex = useSelector((state) => state.expNeopState.sex);
     const popup = useSelector((state) => state.expNeopState.popup);
 
     return ( 

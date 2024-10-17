@@ -66,7 +66,16 @@ import RakProstatyF from './pages/RakProstatyF';
 
 const App = () => {
   const history = useHistory();
+  //Отключение правой кнопки мыши:
+  document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+  });
 
+  //Проверка, выполняется ли страница локально через протокол file://, и если да — скрывать контент или показывать пустую страницу:
+  if (window.location.protocol === 'file:') {
+    document.body.innerHTML = '';
+  };
+   
   function onChangeData(dataForm){
     // console.log(dataForm)
     if (dataForm.diagnoz ==='отравление нефтепродуктами' && dataForm.sex === 'мужской'){
