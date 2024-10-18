@@ -71,10 +71,15 @@ const App = () => {
     event.preventDefault();
   });
 
-  //Проверка, выполняется ли страница локально через протокол file://, и если да — скрывать контент или показывать пустую страницу:
+  //Проверка, выполняется ли страница локально через протокол file://, и если да — скрывать контент или показывать пустую страницу (Прывет!!!):
   if (window.location.protocol === 'file:') {
-    document.body.innerHTML = '';
-  };
+    document.body.innerHTML = `
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <h1 style="color: blue;">Прывет!!!</h1>
+      </div>
+    `;
+    return null; // Прерываем рендеринг компонента
+  }
    
   function onChangeData(dataForm){
     // console.log(dataForm)
